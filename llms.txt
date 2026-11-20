@@ -1,0 +1,40 @@
+# Guia de Argumentação Pelos Humanos
+
+> Todo preconceito merece uma boa resposta. Um guia para pessoas que querem conversar melhor e pensar com mais clareza sobre igualdade, discriminação e poder. Ele cataloga os argumentos usados para justificar que alguns humanos contem menos que outros, ou para defender a concentração de poder e atacar o conhecimento, e leva a sério e explica a fundo os questionamentos e vieses de quem os usa.
+
+Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Animais (https://pelosanimais.biblioverse.org). Cada argumento tem uma página com a versão mais forte da objeção, o que ela acerta, onde falha, uma resposta curta e as fontes.
+
+## Como usar
+
+- [Comece aqui](https://peloshumanos.biblioverse.org/comece-aqui.html): o critério de relevância e senciência, os compromissos do guia e as quatro partes
+- [Sobre o guia](https://peloshumanos.biblioverse.org/sobre.html): o que é o projeto, como as fontes são tratadas e qual é o tom
+- [O que se deve a cada pessoa](https://peloshumanos.biblioverse.org/garantias.html): 29 garantias básicas, da vida ao julgamento justo, com as exceções legítimas e os argumentos que atacam cada uma
+
+## Argumentos
+
+- [Todos os argumentos](https://peloshumanos.biblioverse.org/#argumentos): os 171 argumentos usados contra a igualdade entre humanos, com a falha principal de cada um
+- [As famílias](https://peloshumanos.biblioverse.org/familias.html): os argumentos agrupados por lógica de dominação e pelo movimento que a enfrenta
+- [Família A: Hierarquia e desigualdade "natural"](https://peloshumanos.biblioverse.org/familias/a.html): Alguma diferença entre pessoas justifica que umas contem menos? Enfrenta a igual consideração.
+- [Família B: Sexismo e patriarcado](https://peloshumanos.biblioverse.org/familias/b.html): Ser mulher justifica menos poder, menos salário, menos liberdade? Enfrenta o feminismo.
+- [Família C: Racismo](https://peloshumanos.biblioverse.org/familias/c.html): A cor da pele ou a origem justificam tratamento diferente? Enfrenta o antirracismo.
+- [Família D: Capacitismo](https://peloshumanos.biblioverse.org/familias/d.html): Uma deficiência diminui o valor dos interesses de alguém? Enfrenta o anticapacitismo.
+- [Família E: Etarismo e adultismo](https://peloshumanos.biblioverse.org/familias/e.html): A idade justifica desconsiderar o que alguém quer e sente? Enfrenta o antietarismo e os direitos de crianças e idosos.
+- [Família F: Xenofobia e nacionalismo excludente](https://peloshumanos.biblioverse.org/familias/f.html): O lugar onde alguém nasceu muda o que lhe devemos? Enfrenta o antixenofobia e o cosmopolitismo.
+- [Família G: LGBTfobia e transfobia](https://peloshumanos.biblioverse.org/familias/g.html): A orientação sexual ou a identidade de gênero justificam menos direitos? Enfrenta o respeito à orientação sexual e à identidade de gênero.
+- [Família H: Moralismo sexual: corpos e relações](https://peloshumanos.biblioverse.org/familias/h.html): Quem decide como adultos informados se relacionam e usam o próprio corpo? Enfrenta a liberdade de relações e dos corpos.
+- [Família I: Classismo e aporofobia](https://peloshumanos.biblioverse.org/familias/i.html): A pobreza é culpa de quem é pobre? Enfrenta a justiça social e econômica.
+- [Família J: Concentração de poder](https://peloshumanos.biblioverse.org/familias/j.html): Alguém pode ter poder demais, mesmo sendo competente ou bem-intencionado? Enfrenta a democracia e a distribuição do poder.
+- [Família K: Anticiência, relativismo e ultraceticismo](https://peloshumanos.biblioverse.org/familias/k.html): Se a ciência pode errar, tudo vale a mesma coisa? Enfrenta a defesa do conhecimento.
+- [Família L: Evasões e a liberdade como escudo](https://peloshumanos.biblioverse.org/familias/l.html): Dizer "é só minha opinião" encerra a discussão sobre quem é prejudicado? Enfrenta a conversa honesta.
+- [Família M: Ataques aos movimentos e aos militantes](https://peloshumanos.biblioverse.org/familias/m.html): Um defeito de quem defende uma causa torna a causa falsa? Enfrenta separar a causa de quem a defende.
+- [Objeções políticas e éticas](https://peloshumanos.biblioverse.org/objecoes-politicas.html): o que cada teoria diz para excluir pessoas, e por que isso contradiz o próprio princípio
+- [Treinar respostas](https://peloshumanos.biblioverse.org/treino.html): modo de treino com a objeção e a resposta escondida
+
+## Erros
+
+- [Falácias](https://peloshumanos.biblioverse.org/falacias.html): os erros de lógica que explicam boa parte do catálogo
+- [Vieses](https://peloshumanos.biblioverse.org/vieses.html): os mecanismos psicológicos que tornam esses argumentos convincentes
+
+## Para o próprio movimento
+
+- [Pare de dizer isso](https://peloshumanos.biblioverse.org/argumentos-ruins.html): 33 argumentos usados por quem defende a igualdade que não resistem a exame, e como dizer melhor

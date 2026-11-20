@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+
+# notas internas de redação
+data/BRIEF_CAPITULOS.md

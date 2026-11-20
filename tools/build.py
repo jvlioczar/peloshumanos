@@ -274,7 +274,7 @@ def desc_seo(d):
     return d
 
 LOGO = ('<svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 2h28a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H19l-8 6v-6H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#152a5a"/>'
-        '<g fill="#ffeb5b"><circle cx="15" cy="13" r="4"/><circle cx="25" cy="13" r="4"/><path d="M8 27a7 6 0 0 1 14 0z"/><path d="M18 27a7 6 0 0 1 14 0z"/></g></svg>')
+        '<g fill="#ffeb5b"><circle cx="20" cy="12" r="5"/><path d="M11 28a9 7 0 0 1 18 0z"/></g></svg>')
 TODOS = 'index.html#argumentos'
 MENU = [(TODOS, 'Argumentos'), ('objecoes-politicas.html', 'Objeções políticas'), ('argumentos-ruins.html', 'Pare de dizer isso'),
         ('Aprofundar', [('comece-aqui.html', 'Comece aqui'), ('garantias.html', 'O que se deve a cada pessoa'), ('familias.html', 'As 13 famílias'), ('treino.html', 'Treinar respostas'), ('falacias.html', 'Falácias'), ('vieses.html', 'Vieses')]),

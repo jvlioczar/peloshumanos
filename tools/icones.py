@@ -1,5 +1,5 @@
 """Gera os ícones PNG (192, 512 e apple-touch 180) e a imagem de compartilhamento (assets/share.png) a partir do desenho do logo:
-duas pessoas amarelas num balão de fala azul-tinta. Uso: python tools/icones.py (também é chamado pelo build)."""
+uma pessoa amarela, centralizada, num balão de fala azul-tinta. Uso: python tools/icones.py (também é chamado pelo build)."""
 import os
 from PIL import Image, ImageDraw, ImageFont
 
@@ -14,10 +14,8 @@ def logo(im, x0, y0, esc):
     p = lambda x, y: (x0 + x * esc, y0 + y * esc)
     d.rounded_rectangle([*p(2, 2), *p(38, 32)], radius=4 * esc, fill=TINTA)
     d.polygon([p(19, 31), p(11, 38), p(11, 31)], fill=TINTA)
-    for cx in (15, 25):
-        d.ellipse([*p(cx - 4, 9), *p(cx + 4, 17)], fill=AMARELO)         # cabeças
-        d.ellipse([*p(cx - 7, 21), *p(cx + 7, 33)], fill=AMARELO)        # ombros (a metade de baixo é coberta)
-    d.rectangle([*p(5, 27), *p(35, 31)], fill=TINTA)
+    d.ellipse([*p(15, 7), *p(25, 17)], fill=AMARELO)                      # cabeça
+    d.pieslice([*p(11, 21), *p(29, 35)], 180, 360, fill=AMARELO)          # ombros (metade de cima da elipse)
 
 
 def icone(n, fundo=CREME, margem=0.12):

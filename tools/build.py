@@ -13,6 +13,9 @@ from ruins import RUINS, TIPOS
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = ROOT
 SITE = 'https://peloshumanos.biblioverse.org'
+# Cloudflare Web Analytics: usa o token do hub (biblioverse.org), filtrável por host no painel. Troque aqui se o site ganhar um token próprio.
+CF_TOKEN = 'd74ad6908534494f9d873627105e2efd'
+CF_BEACON = "<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"" + CF_TOKEN + "\"}'></script><!-- End Cloudflare Web Analytics -->"
 NOME = 'Guia de Argumentação Pelos Humanos'
 CURTO = 'Guia de Argumentação'
 IRMAO = 'https://pelosanimais.biblioverse.org'
@@ -388,6 +391,7 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
 </div></footer>
 <script src="{pre}assets/app.js?v={VER_JS}" defer></script>
 <script src="{pre}assets/trecho.js?v={VER_TR}" defer></script>
+{CF_BEACON}
 </body></html>
 '''
     doc = doc.replace('href="index.html"', 'href="./"').replace('href="../index.html"', 'href="../"')
@@ -645,7 +649,7 @@ def sobre():
 <h2>Sobre o tom</h2><p>O guia discute argumentos, não pessoas. Apresenta a versão mais forte de cada objeção e diz o que ela acerta, porque só assim a resposta vale alguma coisa. Quando compara a estrutura lógica de preconceitos diferentes, não está equiparando vítimas nem sofrimentos históricos.</p>
 <h2>Contato</h2><p>Encontrou um erro, tem uma sugestão ou quer discutir um argumento? Mande uma mensagem direta para o criador do guia no Instagram: <a href="https://www.instagram.com/sencientista/" {EXT}>@sencientista</a>. Correções acompanhadas de fonte são especialmente bem-vindas.</p>
 <h2>Apoie</h2><p>A melhor forma de ajudar é fazer as boas respostas circularem. Compartilhe os capítulos, as respostas e as imagens do guia, leia as fontes antes de repetir um dado, e crie conteúdos honestos, que apresentem também o que o outro lado tem de mais forte.</p>{doacao_html()}
-<h2>Privacidade</h2><p>Este site não pede cadastro e não usa cookies próprios. Ele carrega as fontes do Google Fonts e a barra de navegação da BiblioVerse.</p><p>Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p></div></section>'''
+<h2>Privacidade</h2><p>Este site não pede cadastro e não usa cookies próprios. Para contar visitas e saber quais páginas são mais lidas, usa o <a href="https://www.cloudflare.com/web-analytics/">Cloudflare Web Analytics</a>, que mede de forma agregada, sem cookies, sem identificar quem visita e sem rastrear ninguém entre sites. O site também carrega as fontes do Google Fonts e a barra de navegação da BiblioVerse.</p><p>Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p></div></section>'''
     page('sobre.html', 'Sobre o guia', 'O que é o guia de argumentação para quem defende a igualdade entre humanos, o que já está pronto, como as fontes são tratadas e qual é o tom adotado.', corpo, 'sobre.html')
 
 def nao_achou():

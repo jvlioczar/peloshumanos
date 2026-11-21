@@ -62,6 +62,8 @@ ARGS_RAW = [
      'A igualdade formal é necessária, mas não garante a material: a lei proibia a discriminação em países onde ela continuou medida em salários, prisões e mortes'),
     ('A13', 'A desigualdade é o motor do progresso', ['Sem desigualdade ninguém se esforça', 'Se todo mundo ganhasse igual, ninguém trabalharia', 'A inveja dos pobres atrasa o país'],
      'Confunde incentivo com desigualdade extrema: recompensar esforço é compatível com limitar privilégios herdados, e os países mais igualitários não são os menos inovadores'),
+    ('A14', 'Ser honesto é ser otário, cada um cuida de si', ['Quem não leva vantagem é bobo', 'Todo mundo faz', 'Ética é luxo de quem pode'],
+     'Toma uma verdade local, a de que onde há impunidade a honestidade custa mais, por lei geral: "todo mundo faz" é falso nos dados, já que carteiras perdidas com dinheiro foram devolvidas mais vezes em quase todos os países estudados, o Brasil incluído; quando todos seguem só o próprio interesse, todos ficam pior'),
 
     # ---------- B. Sexismo e patriarcado ----------
     ('B1', 'Homens e mulheres são biologicamente diferentes, então têm papéis diferentes', ['A mulher nasceu para cuidar, o homem para prover', 'Biologia não é machismo', 'Existem diferenças cerebrais, é ciência'],
@@ -300,6 +302,8 @@ ARGS_RAW = [
      'Moradia está entre as garantias sociais da Constituição, e a propriedade deve cumprir função social (art. 5º, XXIII); a ocupação não dá título e a lei protege o proprietário, mas chamar de vagabundo quem não tem onde morar ignora o déficit de milhões de moradias e os imóveis vazios que convivem com ele'),
     ('I18', 'Imposto é roubo, não devo nada a ninguém', ['Cada um por si', 'O Estado tira de quem produz para dar a quem não faz nada', 'Não pedi para nascer neste país'],
      'Ninguém produz sozinho: estradas, escolas, segurança, contratos e mercados dependem de instituições pagas em comum, e a vida em comunidade traz deveres além de liberdades (Declaração Universal, art. 29); quanto e como tributar é discussão legítima, e tributo mal usado merece crítica, mas a frase nega a dívida com o que tornou a riqueza possível'),
+    ('I19', 'Ajudar os pobres é papel do governo, não meu', ['Já pago imposto demais', 'Caridade é obrigação do Estado', 'Doar só alimenta a corrupção das ONGs'],
+     'Transforma a divisão de tarefas em isenção: o Estado tem o papel principal e alcança muito mais gente, mas o dever dele não apaga o de quem pode ajudar a baixo custo; ninguém é obrigado por lei a doar, e fraudes reais pedem critério na escolha, não recusa a toda ajuda'),
 
     # ---------- N. Autonomia sobre a própria vida ----------
     ('N1', 'Eutanásia é assassinato, ninguém pode escolher a própria morte', ['Só Deus tira a vida', 'Isso abre a porta para matar idosos e deficientes', 'Quem quer morrer precisa de tratamento, não de ajuda para morrer'],
@@ -362,6 +366,10 @@ ARGS_RAW = [
      'Defesa, julgamento justo e presunção de inocência existem porque o Estado erra, e erra mais contra quem não pode pagar advogado; condenar sem prova pune o inocente e deixa o culpado solto. Há exceções legítimas, como a prisão preventiva fundamentada, mas exceção não é regra'),
     ('J19', 'Se o cliente não gostasse, trocava de banco', ['O mercado já é competitivo, não precisa de regra', 'Abrir os dados para a concorrência é perigoso', 'Open Finance é intervencionismo'],
      'Confunde poder sair com conseguir sair: em mercados concentrados, o histórico do cliente fica com o fornecedor atual, e o concorrente não consegue oferecer melhor sem vê-lo; os sistemas abertos devolvem esse histórico ao cliente, com consentimento, e seus riscos reais, como vazamento, golpe e seleção de risco na saúde, pedem regra bem desenhada, não ausência de regra'),
+    ('J20', 'Daqui a cem anos eu não estarei aqui; não devo nada a quem nem nasceu', ['A natureza intocada não dá emprego', 'As próximas gerações que se virem', 'Clima sempre mudou'],
+     'Confunde não poder ser cobrado com não dever: a distância no tempo, como a distância no espaço, não diminui o dano, e o clima já atinge hoje os pobres que menos emitiram; quanto cada geração deve sacrificar e como proteger os pobres na transição é debate legítimo, mas a resposta não é zero'),
+    ('J21', 'Isso já passou, para que remexer?', ['A ditadura acabou há 40 anos', 'Comissão da Verdade é revanchismo', 'A anistia valeu para os dois lados'],
+     'Confunde memória com punição: lembrar, localizar corpos, registrar mortes e reconhecer não punem ninguém, e para as famílias dos desaparecidos o dano não passou; a punição tardia tem limites reais, mas "já passou" não responde a eles, e a anistia de 1979 não foi simétrica'),
 
     # ---------- K. Anticiência, relativismo e ultraceticismo ----------
     ('K1', 'A ciência também é só uma opinião', ['Cientista acredita, eu acredito em outra coisa', 'É a verdade deles', 'Ciência é uma crença como qualquer outra'],
@@ -416,6 +424,10 @@ ARGS_RAW = [
      'Responder, criticar e deixar de consumir são formas de expressão, não de censura; o que a frase pede é falar sem ser respondido'),
     ('L13', 'Liberdade vale para todos, inclusive para quem quer acabar com ela', ['Se é democracia, tem que aceitar quem defende a ditadura', 'Punir golpista é perseguição', 'Intolerância com intolerante também é intolerância'],
      'Defender qualquer ideia, inclusive mudar a Constituição, é livre; o limite está nos atos, como violência, fraude e golpe, que usam uma liberdade para destruir as dos outros (Declaração Universal, art. 30). Sem esse limite, a liberdade dura até o primeiro grupo que a use para abolir a dos demais'),
+    ('L14', 'O que eu faço sozinho não faz diferença', ['Minha ajuda é uma gota no oceano', 'Um voto não decide eleição', 'Se eu não comprar, outro compra'],
+     'Mede o ato pela fração do problema total, e não pela diferença que faz a quem é ajudado ou prejudicado; danos de massa são feitos de atos pequenos, efeitos imperceptíveis somam, e uma chance pequena de efeito grande não é zero'),
+    ('L15', 'Se não posso fazer tudo, não preciso fazer nada', ['Isso é exigir santidade', 'Ninguém é perfeito, então tanto faz', 'Você também não faz tudo'],
+     'Da impossibilidade de fazer tudo não se segue a permissão de não fazer nada: "dever implica poder" só afasta o impossível, e entre tudo e nada fica o muito que se pode, que é o que as propostas sérias pedem'),
 
     # ---------- M. Ataques aos movimentos e aos militantes ----------
     ('M1', 'Isso é identitarismo, divide a sociedade', ['Pauta identitária', 'Fragmenta a luta', 'Antes éramos todos brasileiros'],
@@ -479,6 +491,8 @@ FALACIAS = [
     ('Autorrefutação', 'A tese derruba a si mesma', 'A9 K2 K4 K8'),
     ('Circularidade', 'A conclusão já está na premissa', 'A11 C10 I5'),
     ('Seleção de casos', 'Escolher só os exemplos que confirmam', 'J11 J5 B11 G8'),
+    ('Paradoxo do monte', 'Concluir que não há diferença porque não há uma linha nítida entre os extremos', 'L14 B10 E4'),
+    ('Disputa verbal', 'Brigar pela palavra quando se concorda, ou discorda, sobre o fato', 'M8 M13 G5'),
     ('Ladeira escorregadia', 'Supor que um passo leva inevitavelmente ao pior', 'G9'),
     ('Apelo às consequências', 'Rejeitar um fato porque seu resultado desagrada', 'H12 D8 K12'),
     ('Culpabilização da vítima', 'Explicar o dano pelo comportamento de quem o sofreu', 'B6 C5 I3 I4 I15 I17'),

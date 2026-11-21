@@ -611,6 +611,21 @@ def comece():
 </div></section>'''
     page('comece-aqui.html', 'Comece aqui', 'O critério de relevância e senciência, os cinco compromissos do guia, as quatro partes e as conversas típicas em que os argumentos contra a igualdade aparecem.', corpo, 'comece-aqui.html')
 
+def doacao_html():
+    """Chaves de doação da página Sobre, as mesmas do guia irmão. Ficam fora do código: nas variáveis de ambiente
+    GUIA_PIX e GUIA_PAYID, ou no arquivo pessoal ~/.guia-doacoes (linhas GUIA_PIX=... e GUIA_PAYID=...), fora da pasta do site."""
+    import sys
+    val = {k: os.environ.get(k, '').strip() for k in ('GUIA_PIX', 'GUIA_PAYID')}
+    arq = os.path.join(os.path.expanduser('~'), '.guia-doacoes')
+    if not all(val.values()) and os.path.exists(arq):
+        for ln in open(arq, encoding='utf-8'):
+            k, _, v = ln.partition('=')
+            if k.strip() in val and not val[k.strip()]: val[k.strip()] = v.strip()
+    pix, payid = val['GUIA_PIX'], val['GUIA_PAYID']
+    if not (pix and payid):
+        sys.exit('Faltam as chaves de doação: defina GUIA_PIX e GUIA_PAYID no ambiente ou no arquivo ~/.guia-doacoes.')
+    return f'<p>Se quiser apoiar com dinheiro, qualquer valor ajuda a manter o guia no ar e atualizado:</p><ul><li><strong>No Brasil</strong>, por Pix: <code>{e(pix)}</code></li><li><strong>Na Austrália</strong>, por PayID: <code>{e(payid)}</code></li></ul>'
+
 def sobre():
     n_cap = len(CAPS)
     contem = f'<p>São {len(ARGS)} argumentos catalogados em {len(FAMILIAS)} famílias, cada um com suas formas comuns e sua falha principal, e {"todos têm" if n_cap >= len(ARGS) else f"{n_cap} têm"} capítulo completo: a resposta curta, a desmontagem passo a passo, os erros e vieses, os testes de coerência e as conexões com os outros argumentos.{"" if n_cap >= len(ARGS) else " Os demais aparecem como verbetes, com as formas, a falha principal e os erros ligados, até que o capítulo fique pronto."} O guia também traz {len(RUINS)} argumentos ruins que quem defende a igualdade deveria abandonar e {len(politicas.TEORIAS)} teorias políticas e éticas com as objeções que costumam vir de cada uma. A página <a href="garantias.html">O que se deve a cada pessoa</a> reúne {len(GAR.ITENS)} garantias básicas, com suas exceções legítimas.</p>'
@@ -626,7 +641,7 @@ def sobre():
 <h2 id="licenca">Licença</h2><p>Os textos e as imagens originais do guia estão sob a licença <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" {EXT}>Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>. Você pode copiar, compartilhar e adaptar o conteúdo para qualquer fim, inclusive comercial, desde que cite a fonte (o nome do guia e o link da página) e indique se fez alterações. A licença não cobre o material de terceiros citado ou linkado no guia, como as fontes, as capas de livros e os logotipos, que seguem os termos de seus próprios autores.</p>
 <h2>Sobre o tom</h2><p>O guia discute argumentos, não pessoas. Apresenta a versão mais forte de cada objeção e diz o que ela acerta, porque só assim a resposta vale alguma coisa. Quando compara a estrutura lógica de preconceitos diferentes, não está equiparando vítimas nem sofrimentos históricos.</p>
 <h2>Contato</h2><p>Encontrou um erro, tem uma sugestão ou quer discutir um argumento? Mande uma mensagem direta para o criador do guia no Instagram: <a href="https://www.instagram.com/sencientista/" {EXT}>@sencientista</a>. Correções acompanhadas de fonte são especialmente bem-vindas.</p>
-<h2>Apoie</h2><p>A melhor forma de ajudar é fazer as boas respostas circularem. Compartilhe os capítulos, as respostas e as imagens do guia, leia as fontes antes de repetir um dado, e crie conteúdos honestos, que apresentem também o que o outro lado tem de mais forte.</p>
+<h2>Apoie</h2><p>A melhor forma de ajudar é fazer as boas respostas circularem. Compartilhe os capítulos, as respostas e as imagens do guia, leia as fontes antes de repetir um dado, e crie conteúdos honestos, que apresentem também o que o outro lado tem de mais forte.</p>{doacao_html()}
 <h2>Privacidade</h2><p>Este site não pede cadastro e não usa cookies próprios. Ele carrega as fontes do Google Fonts e a barra de navegação da BiblioVerse.</p><p>Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p></div></section>'''
     page('sobre.html', 'Sobre o guia', 'O que é o guia de argumentação para quem defende a igualdade entre humanos, o que já está pronto, como as fontes são tratadas e qual é o tom adotado.', corpo, 'sobre.html')
 

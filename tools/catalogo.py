@@ -64,6 +64,8 @@ ARGS_RAW = [
      'Confunde incentivo com desigualdade extrema: recompensar esforço é compatível com limitar privilégios herdados, e os países mais igualitários não são os menos inovadores'),
     ('A14', 'Ser honesto é ser otário, cada um cuida de si', ['Quem não leva vantagem é bobo', 'Todo mundo faz', 'Ética é luxo de quem pode'],
      'Toma uma verdade local, a de que onde há impunidade a honestidade custa mais, por lei geral: "todo mundo faz" é falso nos dados, já que carteiras perdidas com dinheiro foram devolvidas mais vezes em quase todos os países estudados, o Brasil incluído; quando todos seguem só o próprio interesse, todos ficam pior'),
+    ('A15', 'Quem não contribui não tem direito a nada', ['Quem não trabalha não come', 'Direito é para quem paga imposto', 'Primeiro contribua, depois reclame'],
+     'Faz da reciprocidade a medida de todos os direitos e deixa sem proteção justamente quem não pode retribuir: crianças, pessoas com deficiência grave, idosos, gerações futuras e animais; carona é quem pode contribuir e não quer, e a Constituição separa a previdência, contributiva, da assistência, prestada a quem dela necessitar'),
 
     # ---------- B. Sexismo e patriarcado ----------
     ('B1', 'Homens e mulheres são biologicamente diferentes, então têm papéis diferentes', ['A mulher nasceu para cuidar, o homem para prover', 'Biologia não é machismo', 'Existem diferenças cerebrais, é ciência'],
@@ -428,6 +430,8 @@ ARGS_RAW = [
      'Mede o ato pela fração do problema total, e não pela diferença que faz a quem é ajudado ou prejudicado; danos de massa são feitos de atos pequenos, efeitos imperceptíveis somam, e uma chance pequena de efeito grande não é zero'),
     ('L15', 'Se não posso fazer tudo, não preciso fazer nada', ['Isso é exigir santidade', 'Ninguém é perfeito, então tanto faz', 'Você também não faz tudo'],
      'Da impossibilidade de fazer tudo não se segue a permissão de não fazer nada: "dever implica poder" só afasta o impossível, e entre tudo e nada fica o muito que se pode, que é o que as propostas sérias pedem'),
+    ('L16', 'Se aceitar isso, amanhã vão querer tudo', ['Hoje é o casamento gay, amanhã é casar com animal', 'Começa assim e termina na ditadura', 'Abre a porta para tudo'],
+     'Prevê o pior com certeza e sem mostrar o caminho: algumas ladeiras são reais quando há um mecanismo, mas a razão que justifica um passo costuma dizer onde ele para, e as previsões de dissolução da família contra o voto feminino, o divórcio e a união homoafetiva não se cumpriram'),
 
     # ---------- M. Ataques aos movimentos e aos militantes ----------
     ('M1', 'Isso é identitarismo, divide a sociedade', ['Pauta identitária', 'Fragmenta a luta', 'Antes éramos todos brasileiros'],
@@ -484,16 +488,16 @@ FALACIAS = [
     ('Viés do sobrevivente', 'Olhar só para quem passou pelo filtro', 'E7 C10 B11 I1 B19 N6'),
     ('Falácia do bolo fixo', 'Supor que o total é fixo, e o ganho de um é a perda de outro', 'E1 F1 A10'),
     ('Espantalho', 'Refutar uma versão distorcida da posição', 'B3 G5 G3 M8 M13 M14 J19'),
-    ('Non sequitur', 'A conclusão não decorre das premissas', 'A1 A11 D1 J2 B14 E11 J19'),
+    ('Non sequitur', 'A conclusão não decorre das premissas', 'A1 A11 D1 J2 B14 E11 J19 A15'),
     ('Afirmação sem evidência', 'A alegação empírica não vem acompanhada de dado', 'B5 C9 D6 F9 H1 D13'),
     ('Mudança de assunto', 'Responder a outra coisa', 'L9 B7 M6 M10'),
     ('Do falível ao inútil', 'Como pode errar, não serve para nada', 'K3 K8 K10'),
     ('Autorrefutação', 'A tese derruba a si mesma', 'A9 K2 K4 K8'),
     ('Circularidade', 'A conclusão já está na premissa', 'A11 C10 I5'),
     ('Seleção de casos', 'Escolher só os exemplos que confirmam', 'J11 J5 B11 G8'),
-    ('Paradoxo do monte', 'Concluir que não há diferença porque não há uma linha nítida entre os extremos', 'L14 B10 E4'),
+    ('Paradoxo do monte', 'Concluir que não há diferença porque não há uma linha nítida entre os extremos', 'L14 B10 E4 L16'),
     ('Disputa verbal', 'Brigar pela palavra quando se concorda, ou discorda, sobre o fato', 'M8 M13 G5'),
-    ('Ladeira escorregadia', 'Supor que um passo leva inevitavelmente ao pior', 'G9'),
+    ('Ladeira escorregadia', 'Supor que um passo leva inevitavelmente ao pior', 'G9 L16'),
     ('Apelo às consequências', 'Rejeitar um fato porque seu resultado desagrada', 'H12 D8 K12'),
     ('Culpabilização da vítima', 'Explicar o dano pelo comportamento de quem o sofreu', 'B6 C5 I3 I4 I15 I17'),
 ]
@@ -503,7 +507,7 @@ VIESES = [
     ('Viés de confirmação', 'Procurar e lembrar o que confirma o que já se pensa', 'K5 K10 F2 C5'),
     ('Heurística da disponibilidade', 'O que vem fácil à memória parece mais frequente', 'F2 G4 I4 M11'),
     ('Erro fundamental de atribuição', 'Explicar o que os outros fazem pelo caráter, e o que nós fazemos pela situação', 'I1 I3 C10 E3 I17 N4 B16'),
-    ('Crença no mundo justo', 'Supor que cada um tem o que merece', 'I1 I5 B6 A11 J15 B19 N4'),
+    ('Crença no mundo justo', 'Supor que cada um tem o que merece', 'I1 I5 B6 A11 J15 B19 N4 A15'),
     ('Viés de status quo', 'Preferir como está, só porque está', 'A7 H2 L10 J6 I12'),
     ('Favoritismo intragrupo', 'Julgar melhor quem é do próprio grupo', 'F1 F3 A8 C2'),
     ('Homogeneidade do exogrupo', '"Eles são todos iguais"', 'F2 C5 M3 E3 J17'),
@@ -518,7 +522,7 @@ VIESES = [
     ('Reificação do mérito', 'Confundir resultado com merecimento', 'A5 I5 J2 J12'),
     ('Efeito do observador privilegiado', 'Quem não sofre o dano não o vê', 'L11 C4 B2 D2 I16 N5 N8 N10 G14'),
     ('Paternalismo', 'Decidir pelo outro "para o bem dele"', 'D9 E6 H7 J8 N1 D13 N3 N9 N7 H13 B18'),
-    ('Pânico moral', 'Medo desproporcional a uma mudança social', 'G3 G5 H11 F7 E11 B15'),
+    ('Pânico moral', 'Medo desproporcional a uma mudança social', 'G3 G5 H11 F7 E11 B15 L16'),
     ('Cinismo defensivo', 'Descrer de tudo para não ter de agir', 'J10 K10 K8'),
 ]
 

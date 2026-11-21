@@ -1,6 +1,6 @@
 # Guia de Argumentação Pelos Humanos
 
-> Toda objeção à igualdade merece ser levada a sério. Um guia para pessoas que querem conversar melhor e pensar com mais clareza sobre igualdade, discriminação e poder. Ele cataloga de forma sistemática as ideias usadas para justificar que alguns humanos contem menos que outros, para defender a concentração de poder ou para atacar o conhecimento, e leva a sério, explicando a fundo, os questionamentos e vieses de quem as usa.
+> Toda objeção à emancipação humana merece ser levada a sério. Um guia para pessoas que querem conversar melhor e pensar com mais clareza sobre igualdade, discriminação e poder. Ele cataloga de forma sistemática as ideias usadas para justificar que alguns humanos contem menos que outros, para defender a concentração de poder ou para atacar o conhecimento, e leva a sério, explicando a fundo, os questionamentos e vieses de quem as usa.
 
 Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Animais (https://pelosanimais.biblioverse.org). Cada argumento tem uma página com a versão mais forte da objeção, o que ela acerta, onde falha, uma resposta curta e as fontes.
 
@@ -271,7 +271,7 @@ Se a ciência pode errar, tudo vale a mesma coisa? Erro dominante: Epistemológi
 
 Dizer "é só minha opinião" encerra a discussão sobre quem é prejudicado? Erro dominante: Lógico (mudança de assunto) e moral (liberdade sem o outro).
 
-- **L1. "É só a minha opinião, tenho direito a ela"** (https://peloshumanos.biblioverse.org/argumentos/e-so-a-minha-opiniao-tenho-direito-a-ela.html). Também: Cada um pensa como quer; Opinião não se discute; Respeite minha opinião. Falha principal: Opinião sobre gosto não se discute; afirmação sobre pessoas, sim: o direito de ter uma opinião não a torna correta nem a isenta de resposta.
+- **L1. "É só a minha opinião, tenho direito a ela"** (https://peloshumanos.biblioverse.org/argumentos/e-so-a-minha-opiniao-tenho-direito-a-ela.html). Também: Cada um pensa como quer; Opinião não se discute; Respeite minha opinião. Falha principal: Opinião sobre gosto não se discute; afirmação sobre pessoas, sim: o direito de ter uma opinião não a torna correta nem a isenta de resposta, e quem fala responde pelo impacto do que diz.
 - **L2. "Liberdade de expressão: posso dizer o que quiser"** (https://peloshumanos.biblioverse.org/argumentos/liberdade-de-expressao-posso-dizer-o-que-quiser.html). Também: Isso é censura; Não pode mais falar nada; Vão me cancelar por ter opinião. Falha principal: A liberdade de expressão protege contra o Estado, não contra a crítica; e ela sempre teve limites no dano a terceiros, como calúnia, ameaça e incitação.
 - **L3. "Isso é ditadura do politicamente correto"** (https://peloshumanos.biblioverse.org/argumentos/isso-e-ditadura-do-politicamente-correto.html). Também: Patrulha; Mimimi; Não aguento mais essa polícia da linguagem. Falha principal: Chama de ditadura a crítica; ser corrigido por ofender alguém é a liberdade de expressão do outro funcionando, e não dá cadeia.
 - **L4. "Não tive a intenção de ofender"** (https://peloshumanos.biblioverse.org/argumentos/nao-tive-a-intencao-de-ofender.html). Também: Foi sem querer; Não sou preconceituoso; Vocês interpretaram errado. Falha principal: Intenção importa para julgar a pessoa, não o efeito: pisar no pé de alguém sem querer ainda pede que se tire o pé.

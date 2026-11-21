@@ -391,7 +391,7 @@ ARGS_RAW = [
 
     # ---------- L. Evasões e a liberdade como escudo ----------
     ('L1', 'É só a minha opinião, tenho direito a ela', ['Cada um pensa como quer', 'Opinião não se discute', 'Respeite minha opinião'],
-     'Opinião sobre gosto não se discute; afirmação sobre pessoas, sim: o direito de ter uma opinião não a torna correta nem a isenta de resposta'),
+     'Opinião sobre gosto não se discute; afirmação sobre pessoas, sim: o direito de ter uma opinião não a torna correta nem a isenta de resposta, e quem fala responde pelo impacto do que diz'),
     ('L2', 'Liberdade de expressão: posso dizer o que quiser', ['Isso é censura', 'Não pode mais falar nada', 'Vão me cancelar por ter opinião'],
      'A liberdade de expressão protege contra o Estado, não contra a crítica; e ela sempre teve limites no dano a terceiros, como calúnia, ameaça e incitação'),
     ('L3', 'Isso é ditadura do politicamente correto', ['Patrulha', 'Mimimi', 'Não aguento mais essa polícia da linguagem'],

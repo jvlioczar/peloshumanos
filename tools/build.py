@@ -335,7 +335,7 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
     pre = '../' * path.count('/')
     url = SITE + '/' + ('' if home else path)
     LASTMOD[path] = max(_data_fonte(path), PUBLICADO.get(path, HOJE) if path.startswith('argumentos/') else '')
-    full = f'{NOME}: respostas a {len(ARGS)} argumentos contra a igualdade' if home else f'{title} | {NOME}'
+    full = f'{NOME}: respostas a {len(ARGS)} argumentos contra a emancipação humana' if home else f'{title} | {NOME}'
     if len(full) > 60 and not home: full = title
     indexa = '<meta name="robots" content="noindex"/>\n' if erro else f'<link rel="canonical" href="{url}"/>\n' + dados(path, title, desc, url, tipo, trilha, pergunta) + '\n'
     base = '<base href="/"/>\n' if erro else ''
@@ -356,7 +356,7 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
 <meta property="og:image" content="{SITE}/assets/share.png?v={VER_IMG}"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:image:alt" content="{e(NOME)}: toda objeção à igualdade merece ser levada a sério."/>
+<meta property="og:image:alt" content="{e(NOME)}: toda objeção à emancipação humana merece ser levada a sério."/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{SITE}/assets/share.png?v={VER_IMG}"/>
 <meta name="theme-color" content="#152a5a"/>
@@ -437,7 +437,7 @@ def inicio():
     criterio = ('<div class="grade"><a class="cartao" style="--c:#152a5a" href="comece-aqui.html#relevancia"><span class="cod">Relevância</span><h3>Um traço só justifica tratamento diferente se for relevante para o que está em jogo</h3><p class="falha">A cor da pele é irrelevante para saber álgebra; a idade é relevante para dirigir. Toda discriminação injusta toma um traço irrelevante como se fosse relevante.</p></a>'
                 '<a class="cartao" style="--c:#b8460f" href="comece-aqui.html#senciencia"><span class="cod">Senciência</span><h3>Quem pode ser prejudicado ou beneficiado tem interesses que contam</h3><p class="falha">É o que há de comum em toda defesa de indivíduos: o que importa não é a espécie, o sexo, a origem ou a inteligência, e sim a capacidade de sofrer e de ter a vida melhor ou pior.</p></a>'
                 f'<a class="cartao" style="--c:#0b7268" href="{IRMAO}"><span class="cod">O guia irmão</span><h3>Guia de Argumentação Pelos Animais</h3><p class="falha">O mesmo critério, aplicado aos demais animais: mais de 250 argumentos usados para justificar a exploração animal, com boas respostas.</p></a></div>')
-    corpo = f'''<section class="capa"><div class="wrap capa-in"><p class="etiqueta"><span>Para pensar com cuidado sobre os argumentos contra a igualdade:</span></p><h1>Toda objeção à igualdade merece <mark>ser levada a sério</mark>.</h1><p class="lede">{e(DESCRICAO)}</p>
+    corpo = f'''<section class="capa"><div class="wrap capa-in"><p class="etiqueta"><span>Para pensar com cuidado sobre os argumentos contra a igual consideração:</span></p><h1>Toda objeção à emancipação humana merece <mark>ser levada a sério</mark>.</h1><p class="lede">{e(DESCRICAO)}</p>
 <div class="busca-h"><label class="so-leitor" for="hq">O que te disseram?</label><input id="hq" type="search" placeholder="O que te disseram? Ex.: é só a minha opinião" autocomplete="off"/><div id="hres" class="hres" hidden></div></div>
 <div class="comuns-w"><p class="comuns-t">Os mais ouvidos</p><div class="comuns">{comuns}</div></div>
 <div class="cena-h">{PESSOA}<div class="nota" id="nota"><p class="nota-ti">Alguém disse:</p><p class="nota-f"><s id="n-f">"{e(ini["frase"])}"</s></p><p class="nota-r" id="n-r">{e(ini["falha"])}</p><p class="nota-a"><a id="n-l" href="argumentos/{ini["slug"]}.html">Ver a resposta completa →</a><button id="n-o" type="button" class="btn peq alt">Outra objeção ↻</button></p></div>{GRUPO}</div>
@@ -453,7 +453,7 @@ def inicio():
 <div class="raizes-h"><p>Quase toda conversa termina em uma destas três raízes:</p><div>{"".join(f'<a href="{href_arg(c)}"><b>{c}</b> {e(ARGS[c]["frase"])}</a>' for c in CAT.RAIZES)}</div><a class="mais" href="familias.html">Ver as famílias →</a></div></div></section>
 <section class="bloco-cor laranja" id="ruins"><div class="wrap"><div class="sec-cab centro-t"><h2>Pare de dizer isso, ou diga melhor</h2><p>A exigência vale para os dois lados. Estes argumentos circulam entre quem defende a igualdade e não resistem a exame como são ditos: relativismo, generalizações sobre o outro grupo, lugar de fala como veto, explicação única. Toque em um para ver como dizer melhor.</p></div><div class="lista-riscada">{ruins}</div></div></section>
 <section class="fecho"><div class="wrap"><h2>Pronto para a próxima conversa?</h2><p>Leia a objeção, pense no que diria e compare com a resposta.</p><a class="btn" href="treino.html">Treinar respostas</a> <a class="btn alt" href="comece-aqui.html">Como usar o guia</a></div></section>'''
-    page('index.html', NOME, f'Toda objeção à igualdade merece ser levada a sério. {len(ARGS)} argumentos contra a emancipação humana, na versão mais forte, com o que acertam e onde falham.', corpo)
+    page('index.html', NOME, f'Toda objeção à emancipação humana merece ser levada a sério. {len(ARGS)} argumentos contra a igual consideração, na versão mais forte, com o que acertam e onde falham.', corpo)
 
 def familias():
     corpo = cabeca('<a href="./">Início</a>', f'As {len(FAMILIAS)} famílias', 'Argumentos parecidos erram de modo parecido. Cada família reúne os argumentos usados contra um grupo ou um movimento, com a mesma pergunta de fundo e o mesmo tipo de erro dominante.') + '<section class="secao"><div class="wrap">'
@@ -659,7 +659,7 @@ def llms_txt():
     fam = ''.join(f'- [Família {f["c"]}: {f["nome"]}]({u(f"familias/{f["c"].lower()}.html")}): {f["perg"]} Enfrenta {f["mov"].lower()}.\n' for f in FAMILIAS.values())
     txt = f'''# {NOME}
 
-> Toda objeção à igualdade merece ser levada a sério. {DESCRICAO}
+> Toda objeção à emancipação humana merece ser levada a sério. {DESCRICAO}
 
 Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Animais ({IRMAO}). Cada argumento tem uma página com a versão mais forte da objeção, o que ela acerta, onde falha, uma resposta curta e as fontes.
 

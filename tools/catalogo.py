@@ -442,6 +442,8 @@ ARGS_RAW = [
      'Valores como liberdade individual, responsabilidade e não agressão, caros à direita, também pedem o fim da discriminação; a causa não tem partido, e há conservadores que a defendem'),
     ('M13', 'Isso é tudo pós-modernismo', ['Isso vem de Foucault e Derrida', 'É teoria crítica, coisa de acadêmico', 'Esses movimentos negam a razão e a ciência', 'Identitarismo pós-moderno'],
      'Erra a origem e julga pela origem: o abolicionismo, o voto feminino e o movimento negro são anteriores ao pós-modernismo e se apoiaram na igualdade iluminista; o relativismo de algumas correntes é um excesso que se critica, não a pauta, e a ideia de que tudo é poder serve hoje também a quem nega fatos'),
+    ('M14', 'Diversidade nas empresas é contratar pela cor, não pela competência', ['DEI é lacração corporativa', 'Contratam para cumprir cota, não pelo mérito', 'Diversidade derruba a qualidade'],
+     'Confunde diversidade, a composição de uma equipe, com equidade, as práticas que impedem que a cor decida: critérios definidos antes, avaliação única e entrevista estruturada medem melhor a competência, e os experimentos com currículos idênticos mostram que, sem elas, a cor já decide'),
 ]
 
 # Os argumentos mais ouvidos (seleção editorial para a capa).
@@ -462,12 +464,12 @@ FALACIAS = [
     ('Falácia genética', 'Julgar uma ideia pela origem, e não pelo conteúdo', 'A6 M2 K11 M4'),
     ('Ad hominem', 'Atacar a pessoa em vez do argumento', 'B3 M3 M7 M9 K9 J18'),
     ('Tu quoque', '"Você também faz"', 'L7 B7 C7'),
-    ('Falsa dicotomia', 'Só duas opções, quando há outras', 'L9 J1 J14 H4 I14 B14 B15 H13 N2'),
+    ('Falsa dicotomia', 'Só duas opções, quando há outras', 'L9 J1 J14 H4 I14 B14 B15 H13 N2 M14'),
     ('Falsa equivalência', 'Tratar como iguais coisas de peso muito diferente', 'C2 K1 K2 K7 L13'),
-    ('Generalização apressada', 'Da parte para o todo, ou do caso isolado para a regra', 'F2 E3 G8 D3 L11 J17 I13 B17 M13 G14'),
+    ('Generalização apressada', 'Da parte para o todo, ou do caso isolado para a regra', 'F2 E3 G8 D3 L11 J17 I13 B17 M13 G14 M14'),
     ('Viés do sobrevivente', 'Olhar só para quem passou pelo filtro', 'E7 C10 B11 I1 B19 N6'),
     ('Falácia do bolo fixo', 'Supor que o total é fixo, e o ganho de um é a perda de outro', 'E1 F1 A10'),
-    ('Espantalho', 'Refutar uma versão distorcida da posição', 'B3 G5 G3 M8 M13'),
+    ('Espantalho', 'Refutar uma versão distorcida da posição', 'B3 G5 G3 M8 M13 M14'),
     ('Non sequitur', 'A conclusão não decorre das premissas', 'A1 A11 D1 J2 B14 E11'),
     ('Afirmação sem evidência', 'A alegação empírica não vem acompanhada de dado', 'B5 C9 D6 F9 H1 D13'),
     ('Mudança de assunto', 'Responder a outra coisa', 'L9 B7 M6 M10'),
@@ -489,7 +491,7 @@ VIESES = [
     ('Viés de status quo', 'Preferir como está, só porque está', 'A7 H2 L10 J6 I12'),
     ('Favoritismo intragrupo', 'Julgar melhor quem é do próprio grupo', 'F1 F3 A8 C2'),
     ('Homogeneidade do exogrupo', '"Eles são todos iguais"', 'F2 C5 M3 E3 J17'),
-    ('Ameaça ao status', 'Sentir a igualdade do outro como perda própria', 'A10 B9 M5 G4 I13 B14'),
+    ('Ameaça ao status', 'Sentir a igualdade do outro como perda própria', 'A10 B9 M5 G4 I13 B14 M14'),
     ('Reatância', 'Reagir contra o que parece restringir a liberdade', 'L2 L3 L10 G9 N5 N7'),
     ('Dissonância cognitiva', 'Ajustar a crença para não mudar o comportamento', 'C6 I7 B8 L6 N10'),
     ('Efeito Dunning-Kruger', 'Quem sabe pouco superestima o que sabe', 'K5 K7 J8'),

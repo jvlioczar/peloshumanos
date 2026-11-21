@@ -43,13 +43,13 @@ def compartilhar(n_args):
     d.text((390, 180), 'Guia de Argumentação', font=marca, fill=TINTA)
     d.text((390, 248), 'Pelos Humanos', font=marca, fill=TINTA)
     tit = fonte(['seguibl.ttf', 'georgiab.ttf', 'arialbd.ttf'], 150)
-    d.text((150, 470), 'Todo preconceito merece', font=tit, fill=TINTA)
-    l2 = 'uma boa resposta.'
+    d.text((150, 470), 'Toda objeção à igualdade', font=tit, fill=TINTA)
+    l2 = 'merece ser levada a sério.'
     x0, y0, x1, y1 = d.textbbox((150, 660), l2, font=tit)
     d.rectangle([x0 - 16, y0 + 20, x1 + 16, y1 + 14], fill=AMARELO)
     d.text((150, 660), l2, font=tit, fill=TINTA)
     sub = fonte(['segoeuib.ttf', 'arialbd.ttf'], 50)
-    d.text((150, 920), f'+{n_args // 10 * 10} argumentos contra a igualdade, na versão mais forte, com boas respostas', font=sub, fill=TINTA)
+    d.text((150, 920), f'Confira {n_args} argumentos contra a igualdade, tratados de forma honesta', font=sub, fill=TINTA)
     d.text((150, 1000), 'peloshumanos.biblioverse.org', font=fonte(['consolab.ttf', 'cour.ttf', 'arialbd.ttf'], 44), fill=(60, 70, 110))
     return im.resize((1200, 630), Image.LANCZOS)
 

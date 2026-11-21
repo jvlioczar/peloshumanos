@@ -19,8 +19,8 @@ IRMAO = 'https://pelosanimais.biblioverse.org'
 EXT = 'target="_blank" rel="noopener"'
 LANCAMENTO = '2026-11-15'
 DESCRICAO = ('Um guia para pessoas que querem conversar melhor e pensar com mais clareza sobre igualdade, discriminação e poder. '
-             'Ele cataloga os argumentos usados para justificar que alguns humanos contem menos que outros, ou para defender a concentração de poder e atacar o conhecimento, '
-             'e leva a sério e explica a fundo os questionamentos e vieses de quem os usa.')
+             'Ele cataloga de forma sistemática as ideias usadas para justificar que alguns humanos contem menos que outros, para defender a concentração de poder ou para atacar o conhecimento, '
+             'e leva a sério, explicando a fundo, os questionamentos e vieses de quem as usa.')
 e = lambda s: html.escape(str(s), quote=True)
 
 def _ultima_mudanca():
@@ -335,7 +335,7 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
     pre = '../' * path.count('/')
     url = SITE + '/' + ('' if home else path)
     LASTMOD[path] = max(_data_fonte(path), PUBLICADO.get(path, HOJE) if path.startswith('argumentos/') else '')
-    full = f'{NOME}: respostas a +{len(ARGS) // 10 * 10} argumentos contra a igualdade' if home else f'{title} | {NOME}'
+    full = f'{NOME}: respostas a {len(ARGS)} argumentos contra a igualdade' if home else f'{title} | {NOME}'
     if len(full) > 60 and not home: full = title
     indexa = '<meta name="robots" content="noindex"/>\n' if erro else f'<link rel="canonical" href="{url}"/>\n' + dados(path, title, desc, url, tipo, trilha, pergunta) + '\n'
     base = '<base href="/"/>\n' if erro else ''
@@ -356,7 +356,7 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
 <meta property="og:image" content="{SITE}/assets/share.png?v={VER_IMG}"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:image:alt" content="{e(NOME)}: todo preconceito merece uma boa resposta."/>
+<meta property="og:image:alt" content="{e(NOME)}: toda objeção à igualdade merece ser levada a sério."/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{SITE}/assets/share.png?v={VER_IMG}"/>
 <meta name="theme-color" content="#152a5a"/>
@@ -376,13 +376,13 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
 <header class="topo"><div class="wrap topo-in">
 <a class="marca" href="{pre}index.html">{LOGO}<span>Guia de Argumentação<br/>Pelos Humanos</span></a>
 <nav class="menu" aria-label="Principal">{monta_menu(pre, atual)}</nav>
-<button class="bbusca" type="button" aria-label="Buscar um argumento">🔍<span> Buscar</span> <kbd>Ctrl K</kbd></button>
+<button class="bbusca" type="button" aria-label="Buscar um argumento"><svg class="lupa" width="20" height="20" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path fill="currentColor" d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg><span> Buscar</span> <kbd>Ctrl K</kbd></button>
 <button class="hamb" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
 </div></header>
 <div id="busca" hidden><div class="bcx" role="dialog" aria-label="Buscar um argumento"><input id="q" type="search" placeholder="Digite a frase que você ouviu" autocomplete="off"/><div class="res" id="res"></div></div></div>
 <main id="main">{corpo}</main>
 <footer class="rodape"><div class="wrap rodape-in">
-<div><strong>{NOME}</strong><p>Os argumentos usados para justificar que alguns humanos contem menos, na sua versão mais forte, com o que acertam e onde falham.</p><p>Site irmão do <a href="{IRMAO}">Guia de Argumentação Pelos Animais</a>. Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p></div>
+<div><strong>{NOME}</strong><p>Os argumentos usados para justificar que alguns humanos contem menos, na sua versão mais forte, com o que acertam e onde falham.</p><p>Site irmão do <a href="{IRMAO}">Guia de Argumentação Pelos Animais</a>. Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p><p class="licenca">Textos e imagens originais sob licença <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" target="_blank">CC BY 4.0</a>: compartilhe e adapte, citando a fonte. Material de terceiros citado ou linkado segue a licença de origem.</p></div>
 <div><p class="ti">Argumentos</p><ul>{l('comece-aqui.html', 'Como usar o guia')}{l(TODOS, 'Todos os argumentos')}{l('familias.html', f'As {len(FAMILIAS)} famílias')}{l('treino.html', 'Treinar respostas')}{l('argumentos-ruins.html', 'Pare de dizer isso')}</ul></div>
 <div><p class="ti">Aprofundar</p><ul>{l('garantias.html', 'O que se deve a cada pessoa')}{l('objecoes-politicas.html', 'Objeções políticas e éticas')}{l('falacias.html', 'Falácias')}{l('vieses.html', 'Vieses')}{l('sobre.html', 'Sobre o guia')}</ul></div>
 </div></footer>
@@ -437,7 +437,7 @@ def inicio():
     criterio = ('<div class="grade"><a class="cartao" style="--c:#152a5a" href="comece-aqui.html#relevancia"><span class="cod">Relevância</span><h3>Um traço só justifica tratamento diferente se for relevante para o que está em jogo</h3><p class="falha">A cor da pele é irrelevante para saber álgebra; a idade é relevante para dirigir. Toda discriminação injusta toma um traço irrelevante como se fosse relevante.</p></a>'
                 '<a class="cartao" style="--c:#b8460f" href="comece-aqui.html#senciencia"><span class="cod">Senciência</span><h3>Quem pode ser prejudicado ou beneficiado tem interesses que contam</h3><p class="falha">É o que há de comum em toda defesa de indivíduos: o que importa não é a espécie, o sexo, a origem ou a inteligência, e sim a capacidade de sofrer e de ter a vida melhor ou pior.</p></a>'
                 f'<a class="cartao" style="--c:#0b7268" href="{IRMAO}"><span class="cod">O guia irmão</span><h3>Guia de Argumentação Pelos Animais</h3><p class="falha">O mesmo critério, aplicado aos demais animais: mais de 250 argumentos usados para justificar a exploração animal, com boas respostas.</p></a></div>')
-    corpo = f'''<section class="capa"><div class="wrap capa-in"><p class="etiqueta"><span>Para pensar com cuidado sobre os argumentos contra a igualdade:</span></p><h1>Todo preconceito merece <mark>uma boa resposta</mark>.</h1><p class="lede">{e(DESCRICAO)}</p>
+    corpo = f'''<section class="capa"><div class="wrap capa-in"><p class="etiqueta"><span>Para pensar com cuidado sobre os argumentos contra a igualdade:</span></p><h1>Toda objeção à igualdade merece <mark>ser levada a sério</mark>.</h1><p class="lede">{e(DESCRICAO)}</p>
 <div class="busca-h"><label class="so-leitor" for="hq">O que te disseram?</label><input id="hq" type="search" placeholder="O que te disseram? Ex.: é só a minha opinião" autocomplete="off"/><div id="hres" class="hres" hidden></div></div>
 <div class="comuns-w"><p class="comuns-t">Os mais ouvidos</p><div class="comuns">{comuns}</div></div>
 <div class="cena-h">{PESSOA}<div class="nota" id="nota"><p class="nota-ti">Alguém disse:</p><p class="nota-f"><s id="n-f">"{e(ini["frase"])}"</s></p><p class="nota-r" id="n-r">{e(ini["falha"])}</p><p class="nota-a"><a id="n-l" href="argumentos/{ini["slug"]}.html">Ver a resposta completa →</a><button id="n-o" type="button" class="btn peq alt">Outra objeção ↻</button></p></div>{GRUPO}</div>
@@ -453,7 +453,7 @@ def inicio():
 <div class="raizes-h"><p>Quase toda conversa termina em uma destas três raízes:</p><div>{"".join(f'<a href="{href_arg(c)}"><b>{c}</b> {e(ARGS[c]["frase"])}</a>' for c in CAT.RAIZES)}</div><a class="mais" href="familias.html">Ver as famílias →</a></div></div></section>
 <section class="bloco-cor laranja" id="ruins"><div class="wrap"><div class="sec-cab centro-t"><h2>Pare de dizer isso, ou diga melhor</h2><p>A exigência vale para os dois lados. Estes argumentos circulam entre quem defende a igualdade e não resistem a exame como são ditos: relativismo, generalizações sobre o outro grupo, lugar de fala como veto, explicação única. Toque em um para ver como dizer melhor.</p></div><div class="lista-riscada">{ruins}</div></div></section>
 <section class="fecho"><div class="wrap"><h2>Pronto para a próxima conversa?</h2><p>Leia a objeção, pense no que diria e compare com a resposta.</p><a class="btn" href="treino.html">Treinar respostas</a> <a class="btn alt" href="comece-aqui.html">Como usar o guia</a></div></section>'''
-    page('index.html', NOME, f'Todo preconceito merece uma boa resposta. +{len(ARGS) // 10 * 10} argumentos usados contra feminismo, antirracismo, anticapacitismo, imigrantes, pessoas LGBT, pobres e democracia, na versão mais forte, com o que acertam, onde falham e como responder.', corpo)
+    page('index.html', NOME, f'Toda objeção à igualdade merece ser levada a sério. {len(ARGS)} argumentos contra a emancipação humana, na versão mais forte, com o que acertam e onde falham.', corpo)
 
 def familias():
     corpo = cabeca('<a href="./">Início</a>', f'As {len(FAMILIAS)} famílias', 'Argumentos parecidos erram de modo parecido. Cada família reúne os argumentos usados contra um grupo ou um movimento, com a mesma pergunta de fundo e o mesmo tipo de erro dominante.') + '<section class="secao"><div class="wrap">'
@@ -613,13 +613,19 @@ def comece():
 
 def sobre():
     n_cap = len(CAPS)
-    contem = f'<p>Mais de {len(ARGS) // 10 * 10} argumentos estão catalogados em {len(FAMILIAS)} famílias, cada um com suas formas comuns e sua falha principal, e {"todos têm" if n_cap >= len(ARGS) else f"{n_cap} têm"} capítulo completo: a resposta curta, a desmontagem passo a passo, os erros e vieses, os testes de coerência e as conexões com os outros argumentos. Os demais aparecem como verbetes, com as formas, a falha principal e os erros ligados, até que o capítulo fique pronto. O guia também traz {len(RUINS)} argumentos ruins que quem defende a igualdade deveria abandonar e {len(politicas.TEORIAS)} teorias políticas e éticas com as objeções que costumam vir de cada uma. A página <a href="garantias.html">O que se deve a cada pessoa</a> reúne {len(GAR.ITENS)} garantias básicas, com suas exceções legítimas.</p>'
+    contem = f'<p>São {len(ARGS)} argumentos catalogados em {len(FAMILIAS)} famílias, cada um com suas formas comuns e sua falha principal, e {"todos têm" if n_cap >= len(ARGS) else f"{n_cap} têm"} capítulo completo: a resposta curta, a desmontagem passo a passo, os erros e vieses, os testes de coerência e as conexões com os outros argumentos.{"" if n_cap >= len(ARGS) else " Os demais aparecem como verbetes, com as formas, a falha principal e os erros ligados, até que o capítulo fique pronto."} O guia também traz {len(RUINS)} argumentos ruins que quem defende a igualdade deveria abandonar e {len(politicas.TEORIAS)} teorias políticas e éticas com as objeções que costumam vir de cada uma. A página <a href="garantias.html">O que se deve a cada pessoa</a> reúne {len(GAR.ITENS)} garantias básicas, com suas exceções legítimas.</p>'
     corpo = cabeca('<a href="./">Início</a>', 'Sobre o guia', e(DESCRICAO)) + f'''<section class="secao"><div class="wrap estreito artigo"><h2>O projeto</h2><p>O Guia de Argumentação Pelos Humanos foi lançado em novembro de 2026 pelo ativista Julio Cesar Prava, como site irmão do <a href="{IRMAO}" {EXT}>Guia de Argumentação Pelos Animais</a>. O objetivo é mapear os argumentos usados contra os movimentos de emancipação humana, feminismo, antirracismo, anticapacitismo, antietarismo, antixenofobia, respeito à orientação sexual e à identidade de gênero, liberdade das relações e dos corpos, justiça social, democracia e defesa do conhecimento, e ajudar quem defende e quem contesta esses movimentos a melhorar o debate: conhecer a versão mais forte de cada objeção, onde ela falha, o que ela acerta e para onde a conversa costuma ir depois.</p>
-<h2>A abordagem</h2><p>O guia segue a tradição da filosofia analítica e da epistemologia: busca clareza nos conceitos, argumentos válidos e premissas apoiadas em evidência. O critério que o orienta é a igual consideração de quem pode ser prejudicado ou beneficiado, a senciência, e o teste da relevância: um traço só justifica tratamento diferente quando tem relação com o que está em jogo. Por isso o mesmo critério vale para pessoas e para os demais animais, e os dois guias se complementam.</p><p>O guia não é identitário nem relativista. Ele critica, na seção <a href="argumentos-ruins.html">Pare de dizer isso</a>, os exageros e os argumentos ruins que circulam entre quem defende a igualdade, porque a causa certa não torna bom um argumento ruim, e porque os movimentos de emancipação sempre precisaram de fatos para vencer.</p>
+<h2>A abordagem</h2><p>O guia segue a tradição da filosofia analítica e, em epistemologia, a epistemologia analítica contemporânea, falibilista e de orientação naturalista: busca clareza nos conceitos, argumentos válidos e premissas apoiadas em evidência; trata o conhecimento como revisável; procura ajustar a confiança em cada crença à força da evidência; e, nas questões de fato, como salários, violência, saúde ou migração, apoia-se nas ciências e no consenso de quem as estuda. O naturalismo aqui é moderado: a filosofia trabalha em continuidade com as ciências, sem abrir mão de avaliar o que conta como boa razão, como fazem a lógica e a ética. O critério que o orienta é a igual consideração de quem pode ser prejudicado ou beneficiado, a senciência, e o teste da relevância: um traço só justifica tratamento diferente quando tem relação com o que está em jogo. Por isso o mesmo critério vale para pessoas e para os demais animais, e os dois guias se complementam. O guia também mostra que ideias como razão, liberdade e justiça não devem ser instrumentalizadas em benefício próprio.</p><p>Os argumentos de economia e de produtividade aparecem como correção de fatos, e não como justificativa moral: a igualdade não depende de ser lucrativa, e quem a defende só porque ela rende tende a abandoná-la quando deixa de render.</p><p>O guia não é identitário nem relativista. Ele critica, na seção <a href="argumentos-ruins.html">Pare de dizer isso</a>, os exageros e os argumentos ruins que circulam entre quem defende a igualdade, porque a causa certa não torna bom um argumento ruim, e porque os movimentos de emancipação sempre precisaram de fatos para vencer.</p>
 <h2>O que o guia contém</h2>{contem}
-<h2>Sobre as fontes</h2><p>Afirmações empíricas precisam de fonte. Os links nas referências levam às fontes conferidas na redação. Quando um texto indica "fonte ainda não conferida", a referência existe, mas ainda não foi checada no original. Correções acompanhadas de fonte são especialmente bem-vindas.</p>
+<h2 id="como-usar">Como usar o site</h2><ol>
+<li><strong>Responder comentários na internet.</strong> É o uso mais simples: busque a frase que você leu, copie a resposta curta ou gere uma imagem dela e publique na conversa, com o link do capítulo para quem quiser ler mais.</li>
+<li><strong>Checar fatos em debates sobre igualdade, discriminação e poder.</strong> Cada capítulo separa o que o argumento acerta do que ele erra e indica as fontes, o que ajuda a conferir um dado antes de repeti-lo ou contestá-lo.</li>
+<li><strong>Treinar sistemas de IA para não reproduzirem preconceitos.</strong> Os argumentos, as respostas e a falha de cada um podem servir para montar conjuntos de dados e testes de avaliação de modelos de linguagem. Para isso, o site oferece versões em texto simples: <a href="llms.txt">llms.txt</a>, o índice, e <a href="llms-full.txt">llms-full.txt</a>, com todos os argumentos e a falha de cada um.</li>
+<li><strong>Ativismo e debates em tempo real.</strong> Em conversas na rua, em eventos ou em debates ao vivo, o guia serve de consulta rápida, inclusive por meio de assistentes de IA em dispositivos vestíveis, como óculos e fones, que podem buscar a resposta durante a conversa.</li></ol>
+<h2>Sobre as fontes</h2><p>Afirmações empíricas precisam de fonte. Os links nas referências levam às fontes conferidas na redação. Quando um texto indica "fonte ainda não conferida", a referência existe, mas ainda não foi checada no original.</p>
+<h2 id="licenca">Licença</h2><p>Os textos e as imagens originais do guia estão sob a licença <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" {EXT}>Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>. Você pode copiar, compartilhar e adaptar o conteúdo para qualquer fim, inclusive comercial, desde que cite a fonte (o nome do guia e o link da página) e indique se fez alterações. A licença não cobre o material de terceiros citado ou linkado no guia, como as fontes, as capas de livros e os logotipos, que seguem os termos de seus próprios autores.</p>
 <h2>Sobre o tom</h2><p>O guia discute argumentos, não pessoas. Apresenta a versão mais forte de cada objeção e diz o que ela acerta, porque só assim a resposta vale alguma coisa. Quando compara a estrutura lógica de preconceitos diferentes, não está equiparando vítimas nem sofrimentos históricos.</p>
-<h2>Contato</h2><p>Encontrou um erro, tem uma sugestão ou quer discutir um argumento? Mande uma mensagem direta para o criador do guia no Instagram: <a href="https://www.instagram.com/sencientista/" {EXT}>@sencientista</a>.</p>
+<h2>Contato</h2><p>Encontrou um erro, tem uma sugestão ou quer discutir um argumento? Mande uma mensagem direta para o criador do guia no Instagram: <a href="https://www.instagram.com/sencientista/" {EXT}>@sencientista</a>. Correções acompanhadas de fonte são especialmente bem-vindas.</p>
 <h2>Apoie</h2><p>A melhor forma de ajudar é fazer as boas respostas circularem. Compartilhe os capítulos, as respostas e as imagens do guia, leia as fontes antes de repetir um dado, e crie conteúdos honestos, que apresentem também o que o outro lado tem de mais forte.</p>
 <h2>Privacidade</h2><p>Este site não pede cadastro e não usa cookies próprios. Ele carrega as fontes do Google Fonts e a barra de navegação da BiblioVerse.</p><p>Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p></div></section>'''
     page('sobre.html', 'Sobre o guia', 'O que é o guia de argumentação para quem defende a igualdade entre humanos, o que já está pronto, como as fontes são tratadas e qual é o tom adotado.', corpo, 'sobre.html')
@@ -637,7 +643,7 @@ def llms_txt():
     fam = ''.join(f'- [Família {f["c"]}: {f["nome"]}]({u(f"familias/{f["c"].lower()}.html")}): {f["perg"]} Enfrenta {f["mov"].lower()}.\n' for f in FAMILIAS.values())
     txt = f'''# {NOME}
 
-> Todo preconceito merece uma boa resposta. {DESCRICAO}
+> Toda objeção à igualdade merece ser levada a sério. {DESCRICAO}
 
 Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Animais ({IRMAO}). Cada argumento tem uma página com a versão mais forte da objeção, o que ela acerta, onde falha, uma resposta curta e as fontes.
 

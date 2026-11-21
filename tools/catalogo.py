@@ -13,7 +13,7 @@ PARTES = {
     'ESC': ('Escudos', 'Como a conversa é evitada', 'As evasões que servem a qualquer preconceito e os ataques dirigidos aos movimentos, e não aos argumentos.'),
 }
 
-CORES = {'A': '#b8460f', 'B': '#b0306e', 'C': '#7b3fa0', 'D': '#1d63b8', 'E': '#8a6100', 'F': '#0b7268', 'G': '#c22f2f', 'H': '#d4487a', 'I': '#5e6c0e', 'J': '#2f4a7a', 'K': '#0a6f8f', 'L': '#8a4d2c', 'M': '#46607a'}
+CORES = {'A': '#b8460f', 'B': '#b0306e', 'C': '#7b3fa0', 'D': '#1d63b8', 'E': '#8a6100', 'F': '#0b7268', 'G': '#c22f2f', 'H': '#d4487a', 'I': '#5e6c0e', 'J': '#2f4a7a', 'K': '#0a6f8f', 'L': '#8a4d2c', 'M': '#46607a', 'N': '#4b3f8f'}
 
 # (código, parte, nome, movimento, pergunta de fundo, erro dominante)
 FAMILIAS_RAW = [
@@ -26,6 +26,7 @@ FAMILIAS_RAW = [
     ('G', 'GRU', 'LGBTfobia e transfobia', 'O respeito à orientação sexual e à identidade de gênero', 'A orientação sexual ou a identidade de gênero justificam menos direitos?', 'Empírico (biologia mal contada) e moral (apelo à natureza e ao costume)'),
     ('H', 'GRU', 'Moralismo sexual: corpos e relações', 'A liberdade de relações e dos corpos', 'Quem decide como adultos informados se relacionam e usam o próprio corpo?', 'Moral (gosto pessoal tomado como norma) e empírico'),
     ('I', 'GRU', 'Classismo e aporofobia', 'A justiça social e econômica', 'A pobreza é culpa de quem é pobre?', 'Empírico (ignora as condições de partida) e moral (mérito como destino)'),
+    ('N', 'GRU', 'Autonomia sobre a própria vida', 'A autonomia, a redução de danos e o limite do dano aos outros', 'Quem decide sobre a vida de cada pessoa, e onde essa decisão passa a atingir os outros?', 'Moral (paternalismo sem limite, ou liberdade que ignora o dano aos outros) e empírico (risco e evidência mal pesados)'),
     ('J', 'POD', 'Concentração de poder', 'A democracia e a distribuição do poder', 'Alguém pode ter poder demais, mesmo sendo competente ou bem-intencionado?', 'Empírico (casos excepcionais tomados como regra) e moral (fim justifica concentração)'),
     ('K', 'POD', 'Anticiência, relativismo e ultraceticismo', 'A defesa do conhecimento', 'Se a ciência pode errar, tudo vale a mesma coisa?', 'Epistemológico (do falível ao inútil) e lógico (falsa equivalência)'),
     ('L', 'ESC', 'Evasões e a liberdade como escudo', 'A conversa honesta', 'Dizer "é só minha opinião" encerra a discussão sobre quem é prejudicado?', 'Lógico (mudança de assunto) e moral (liberdade sem o outro)'),
@@ -89,6 +90,18 @@ ARGS_RAW = [
      'Preferências formadas sob expectativas desiguais não são escolhas livres; onde a licença é dividida e a creche existe, a "preferência" muda'),
     ('B13', 'Assédio é exagero, antes era só elogio', ['Hoje não pode mais nem elogiar', 'Mulher gosta de ser cantada', 'Isso é mimimi, antes ninguém reclamava'],
      'Confunde elogio com insistência não desejada; o que mudou não foi a sensibilidade, foi a possibilidade de reclamar sem ser demitida ou culpada'),
+    ('B14', 'E o direito dos homens?', ['E os direitos dos homens?', 'Feminismo é dois pesos e duas medidas', 'Cadê o Dia do Homem?', 'Se existe feminismo, tem que existir masculinismo'],
+     'A régua é a mesma e aponta desigualdades reais contra os homens, como o serviço militar obrigatório só para eles e a licença-paternidade curta, mas várias dessas correções estão na agenda do próprio feminismo, e a falta de atenção a uma pauta não pede um movimento contra as mulheres; os homens mortos de forma violenta morrem sobretudo pelas mãos de outros homens, o que aponta para normas de masculinidade, armas e crime, não para o feminismo nem para todos os homens'),
+    ('B15', 'Pornografia é só fantasia, não faz mal a ninguém', ['É só ficção, todo mundo sabe que não é real', 'Fetiche é gosto, não tem nada a ver com preconceito', 'Cada um assiste o que quiser'],
+     'Mistura uma liberdade verdadeira com uma afirmação falsa: adultos podem fazer e ver pornografia, mas parte do conteúdo é gravada ou divulgada sem consentimento, o roteiro dominante põe a agressão sobre mulheres e reduz grupos a estereótipos, e para muitos adolescentes é a primeira aula de sexo; o efeito sobre a violência na população é disputado, o "ninguém" não é'),
+    ('B16', 'Não vale a pena ficar com mulher que tem filhos', ['Mãe solo é bagagem', 'Não vou criar filho dos outros', 'Mulher com filho só quer um pai para a criança'],
+     'Não querer enteados é preferência legítima, mas a frase transforma o "não quero" em "ela não vale a pena" e em suspeita de golpe, e cobra da mãe, que ficou com a criança, o custo deixado pelo pai que foi embora'),
+    ('B17', 'Toda mulher é interesseira', ['Mulher só quer dinheiro', 'Sem carro e sem casa você não arruma ninguém', 'Mulher escolhe pela conta bancária'],
+     'De uma diferença média na importância dada à renda, em que os dois sexos põem bondade e inteligência à frente, salta para "toda" mulher, e troca a busca de segurança, num país em que elas ganham menos e cuidam mais, por defeito de caráter'),
+    ('B18', 'Mulher é o sexo frágil', ['Isso não é coisa de mulher', 'Mulher não aguenta esse trabalho', 'Mulher tem que ser protegida'],
+     'Passa de uma diferença média real de força nos braços e no tronco para uma fragilidade geral que os dados desmentem, porque as mulheres vivem mais e sobrevivem melhor desde o primeiro ano de vida, e trata a média do grupo como teto de cada mulher, quando a tarefa pede um teste igual para todos'),
+    ('B19', 'As mulheres não são tão relevantes na história', ['Quem fez a história foram os homens', 'Cite uma grande inventora', 'Se as mulheres fossem tão capazes, haveria mais gênios mulheres'],
+     'Toma o registro histórico, de fato masculino, como medida de relevância e de capacidade, quando ele mede quem a lei deixou estudar, publicar, votar e receber crédito; a ausência produzida pela exclusão vira justificativa da exclusão'),
 
     # ---------- C. Racismo ----------
     ('C1', 'Não existe racismo no Brasil, somos todos misturados', ['O Brasil é uma democracia racial', 'Aqui todo mundo tem um pé na cozinha', 'Racismo é problema dos Estados Unidos'],
@@ -163,10 +176,12 @@ ARGS_RAW = [
      'Viés do sobrevivente: a pesquisa acumulada mostra que a punição física aumenta agressividade e ansiedade e não melhora o comportamento mais do que outras formas de limite'),
     ('E8', 'Adolescente não deveria opinar sobre política', ['Não paga conta, não pode falar', 'Voto aos 16 é absurdo', 'Quando crescer vai entender'],
      'A idade mínima é uma convenção, e os jovens são afetados por decisões sobre educação, clima e trabalho mais tempo do que qualquer outro grupo'),
-    ('E9', 'Velho e criança não têm vida sexual nem afetiva, isso é constrangedor', ['Namorar nessa idade é ridículo', 'Idoso não precisa disso', 'Falar de sexualidade com criança é pedofilia'],
-     'Nega o afeto e a sexualidade de idosos, documentados em todas as idades, e confunde ensinar crianças a proteger o próprio corpo, que melhora o reconhecimento e a revelação de abusos, com erotização; qualquer contato sexual com criança é crime'),
+    ('E9', 'Velho não tem vida sexual nem afetiva, isso é constrangedor', ['Namorar nessa idade é ridículo', 'Idoso não precisa disso', 'Vovô vai casar de novo? Que vergonha'],
+     'Nega a vida afetiva e sexual dos idosos, medida em pesquisa e protegida pelo Estatuto da Pessoa Idosa, e o tabu tem custo: o médico não pergunta e os casos de aids acima dos 60 anos crescem; a proteção legítima vale quando a capacidade de consentir está comprometida, como na demência avançada, caso a caso e não pela idade'),
     ('E10', 'Pessoas mais velhas são sábias por natureza, devem ser obedecidas', ['Respeite seus mais velhos', 'Mais velho sempre tem razão', 'A experiência vale mais que o estudo'],
      'Etarismo invertido: a idade acumula experiência, mas não garante acerto; respeitar alguém não é obedecer sem exame'),
+    ('E11', 'Criança não tem vida afetiva', ['Criança esquece rápido, não sofre de verdade', 'Isso é manha, logo passa', 'Falar do corpo com criança é sexualizar'],
+     'Confunde esquecer com não sofrer: crianças têm apego, luto, depressão e ansiedade medidos desde a idade pré-escolar, e a adversidade na infância aparece na saúde adulta; ensinar o nome do corpo e o direito de contar protege e não sexualiza, porque criança não tem vida sexual com ninguém, e qualquer ato sexual com menor de 14 anos é crime'),
 
     # ---------- F. Xenofobia e nacionalismo excludente ----------
     ('F1', 'Imigrantes roubam os empregos dos brasileiros', ['Vêm para cá tirar o nosso trabalho', 'Eles aceitam ganhar menos e derrubam os salários', 'Primeiro os brasileiros'],
@@ -211,12 +226,14 @@ ARGS_RAW = [
      'Usar o nome de alguém custa nada e é o que fazemos com apelidos e nomes de casada; recusar de propósito é o que se chama de desrespeito em qualquer outro contexto'),
     ('G10', 'Casal gay não deveria adotar, a criança precisa de pai e mãe', ['Vai ser discriminada na escola', 'Falta a figura masculina ou feminina', 'E o direito da criança?'],
      'Os estudos com famílias estáveis não encontram prejuízo consistente no desenvolvimento de crianças criadas por casais do mesmo sexo, embora haja dissidência; o critério da adoção é o melhor interesse da criança, avaliado caso a caso para qualquer casal'),
-    ('G11', 'Terapia pode reverter a homossexualidade', ['Cura gay', 'Com ajuda, a pessoa volta ao normal', 'É escolha, dá para escolher de novo'],
+    ('G11', 'Terapia pode reverter a homossexualidade', ['Homossexualidade pode ser corrigida', 'Cura gay', 'Com ajuda, a pessoa volta ao normal', 'É escolha, dá para escolher de novo'],
      'Nenhuma terapia de conversão tem eficácia demonstrada, elas estão associadas a sofrimento e risco de suicídio, e o Conselho Federal de Psicologia as proíbe desde 1999; buscar apoio psicológico para conflitos com a própria orientação é legítimo, prometer cura não'),
-    ('G12', 'Bissexual é indeciso, assexual é reprimido', ['Bi é gay enrustido', 'Assexual só não achou a pessoa certa', 'Isso não existe'],
-     'Nega a experiência relatada por milhões de pessoas e reconhecida na pesquisa; orientação não precisa da aprovação alheia para existir'),
-    ('G13', 'Isso é pecado, minha religião não aceita', ['A Bíblia condena', 'Deus fez homem e mulher', 'Amo o pecador, odeio o pecado'],
+    ('G12', 'Bissexual é indeciso', ['Pessoas bi são indecisas, não sabem o que querem', 'Bi é gay enrustido', 'É só uma fase', 'Bissexual não existe, tem que escolher um lado'],
+     'Confunde fluidez com indecisão: que algumas pessoas mudem de identidade não prova que a bissexualidade seja fase ou disfarce, e os dados a registram como orientação real, desacreditada dos dois lados e com custo medido em saúde mental'),
+    ('G13', 'Isso é pecado, minha religião não aceita', ['Homossexualidade é pecado', 'A Bíblia condena', 'Deus fez homem e mulher', 'Amo o pecador, odeio o pecado'],
      'Crença religiosa não pode fundamentar lei num Estado laico, e a mesma Bíblia já serviu para condenar o divórcio e a mulher de cabelo solto; muitas igrejas hoje acolhem'),
+    ('G14', 'Assexual é reprimido, só não achou a pessoa certa', ['Isso é falta de hormônio, vai ao médico', 'Assexualidade não existe', 'Todo mundo tem desejo, é trauma'],
+     'De "a falta de desejo pode ter causa médica ou vir de um trauma" tira "toda falta de atração é doença"; o que separa as duas coisas é o sofrimento da pessoa e a mudança em relação a como ela era antes, e o próprio DSM-5 exclui do diagnóstico quem se identifica como assexual'),
 
     # ---------- H. Moralismo sexual: corpos e relações ----------
     ('H1', 'Relacionamento aberto nunca dá certo', ['Não monogamia é desculpa para trair', 'No fim alguém sempre sofre', 'É moda que acaba em separação'],
@@ -243,8 +260,8 @@ ARGS_RAW = [
      'As revisões mostram, em média, o oposto: educação sexual de qualidade não antecipa a primeira relação, tende a reduzir a gravidez na adolescência e ajuda crianças a reconhecer e contar abusos; conteúdo adequado à idade e participação das famílias são exigências legítimas'),
     ('H12', 'Quem é livre demais no amor vai acabar sozinho', ['Depois dos 40 ninguém quer', 'Vai morrer sozinha com gatos', 'Liberdade agora, arrependimento depois'],
      'Ameaça no lugar de argumento: a solidão na velhice acompanha a falta de rede de afeto, de saúde e de renda, e não ter parceiro é fator de risco; mas nenhum estudo mostra que relações livres levem à solidão, e nenhum formato é garantia'),
-    ('H13', 'Eutanásia é assassinato, ninguém pode escolher a própria morte', ['Só Deus tira a vida', 'Isso abre a porta para matar idosos e deficientes', 'Quem quer morrer precisa de tratamento, não de ajuda para morrer'],
-     'Confunde tirar a vida de alguém contra a sua vontade com respeitar a decisão livre, informada e repetida de quem sofre sem alívio possível; o risco de pressão sobre pessoas vulneráveis é real e pede salvaguardas rígidas e cuidados paliativos antes, não a proibição de tudo'),
+    ('H13', 'Sexo só depois do casamento', ['Mulher direita casa virgem', 'Quem se guarda é mais feliz no casamento', 'Educação sexual tem que ensinar a esperar, e só isso'],
+     'Toma uma escolha legítima, a de esperar por fé ou por valores, como norma para todos: a virgindade foi cobrada só das mulheres, até pela lei, e as promessas e os programas que ensinam só a esperar não adiaram a iniciação de forma consistente, enquanto quem promete e não cumpre usa menos proteção; negar informação a quem não espera não protege ninguém'),
 
     # ---------- I. Classismo e aporofobia ----------
     ('I1', 'Pobre é pobre porque quer', ['Falta de esforço', 'Quem trabalha não fica pobre', 'Oportunidade todo mundo tem'],
@@ -283,6 +300,28 @@ ARGS_RAW = [
      'Moradia está entre as garantias sociais da Constituição, e a propriedade deve cumprir função social (art. 5º, XXIII); a ocupação não dá título e a lei protege o proprietário, mas chamar de vagabundo quem não tem onde morar ignora o déficit de milhões de moradias e os imóveis vazios que convivem com ele'),
     ('I18', 'Imposto é roubo, não devo nada a ninguém', ['Cada um por si', 'O Estado tira de quem produz para dar a quem não faz nada', 'Não pedi para nascer neste país'],
      'Ninguém produz sozinho: estradas, escolas, segurança, contratos e mercados dependem de instituições pagas em comum, e a vida em comunidade traz deveres além de liberdades (Declaração Universal, art. 29); quanto e como tributar é discussão legítima, e tributo mal usado merece crítica, mas a frase nega a dívida com o que tornou a riqueza possível'),
+
+    # ---------- N. Autonomia sobre a própria vida ----------
+    ('N1', 'Eutanásia é assassinato, ninguém pode escolher a própria morte', ['Só Deus tira a vida', 'Isso abre a porta para matar idosos e deficientes', 'Quem quer morrer precisa de tratamento, não de ajuda para morrer'],
+     'Confunde tirar a vida de alguém contra a sua vontade com respeitar a decisão livre, informada e repetida de quem sofre sem alívio possível; o risco de pressão sobre pessoas vulneráveis é real e pede salvaguardas rígidas e cuidados paliativos antes, não a proibição de tudo'),
+    ('N2', 'Usuário de drogas é bandido, tem que ser preso', ['Quem compra financia o tráfico', 'Maconheiro é vagabundo', 'Descriminalizar é liberar geral'],
+     'Trata uma escolha que afeta sobretudo quem usa como crime contra a sociedade e pede a prisão que a lei não prevê desde 2006; o problema real é a linha seletiva entre usuário e traficante, e prender quem usa não diminui o mercado ilegal'),
+    ('N3', 'Viciado tem que ser internado à força', ['Dependente não sabe o que quer', 'Interna e resolve', 'Comunidade terapêutica salva'],
+     'Transforma a exceção legítima em regra: a internação involuntária cabe em risco grave, com decisão médica, aviso ao Ministério Público e prazo de 90 dias, mas a lei põe o tratamento fora do hospital em primeiro lugar, e a evidência não mostra que o tratamento forçado funcione melhor'),
+    ('N4', 'Aposta é diversão, quem se vicia é fraco', ['Perde dinheiro em bet quem quer', 'É só não jogar', 'Cada um gasta o que é seu'],
+     'Culpa quem adoece por um transtorno reconhecido pelo DSM-5, pela CID-11 e pela OMS, e com isso protege uma indústria que tira boa parte da receita de quem joga em nível prejudicial e desenha seus produtos para manter a pessoa jogando'),
+    ('N5', 'Vacina é escolha minha, ninguém pode me obrigar', ['Meu corpo, minhas regras', 'Se você está vacinado, por que tem medo de mim?', 'Ninguém sabe o que tem nessa vacina'],
+     'Trata como privada uma decisão cujo risco recai sobre bebês, imunossuprimidos e quem a vacina não protegeu, e confunde obrigar com forçar: o STF proibiu a vacinação à força e admitiu medidas indiretas previstas em lei, e o sarampo voltou ao Brasil quando a cobertura caiu'),
+    ('N6', 'Dirijo bem depois de umas cervejas', ['Uma latinha não faz diferença', 'Conheço o meu limite', 'Lei Seca é indústria da multa'],
+     'Beber é escolha privada, mas dirigir depois põe em risco pedestres, passageiros e outros motoristas; o risco sobe já em concentrações baixas, e o álcool piora também a avaliação da própria capacidade, sobretudo em quem bebe muito e se acha acostumado'),
+    ('N7', 'Cinto e capacete são problema meu, o Estado não tem nada com isso', ['Se eu morrer, morro eu', 'É só um trajeto curto', 'Lei para me proteger de mim mesmo é absurdo'],
+     'O risco recai sobretudo sobre quem não usa, e a objeção ao paternalismo é séria; mas o passageiro sem cinto atrás põe em risco quem vai na frente, as crianças não escolhem, e o resgate, a internação e a pensão saem do fundo comum, o que, somado ao custo mínimo de cumprir, justifica a obrigação'),
+    ('N8', 'O que eu faço da minha vida não é da conta de ninguém', ['Não estou prejudicando ninguém', 'Cada um cuida da sua vida', 'Problema meu'],
+     'Verdade para o que afeta só a própria pessoa, escudo quando não: a escolha deixa de ser privada quando causa dano direto a terceiros ou impõe a eles risco sem consentimento; os custos difusos são o caso disputado, em que o "custo social" pode virar desculpa para o paternalismo, e criticar não é proibir'),
+    ('N9', 'O Estado tem que proteger as pessoas delas mesmas', ['É para o seu bem', 'Se deixar, o povo faz besteira', 'Proibir é a forma de cuidar'],
+     'A proteção é legítima quando falta informação, quando a capacidade está comprometida, com crianças e em decisões irreversíveis sob pressão, de preferência informando, adiando ou apoiando; vira controle quando proíbe o que só afeta a própria pessoa, decide por adultos capazes e pune quem já sofre'),
+    ('N10', 'Comer carne é escolha pessoal, cada um come o que quiser', ['Não me obrigue a ser vegano', 'Respeito a sua escolha, respeite a minha', 'É só comida'],
+     'Aplica o princípio do dano esquecendo a vítima: só é escolha privada se os animais sencientes mortos não forem "outros", e passa de "permitido por lei" a "moralmente privado"; respeitar quem come não torna neutra uma escolha pela qual outro ser paga com sofrimento e com a vida, quando há alternativas'),
 
     # ---------- J. Concentração de poder ----------
     ('J1', 'Um ditador competente resolve mais rápido que a democracia', ['Precisamos de um líder forte', 'Democracia é lenta demais', 'Olha a China, olha Singapura'],
@@ -401,6 +440,8 @@ ARGS_RAW = [
      'Pode haver exageros, e este guia os lista; mas que um defensor exagere não reduz o dano medido, e a crítica justa é ao exagero, não à causa'),
     ('M12', 'Movimento social é coisa de esquerdista', ['Feminismo é comunismo', 'Direitos humanos é coisa de petista', 'Tudo isso é política partidária'],
      'Valores como liberdade individual, responsabilidade e não agressão, caros à direita, também pedem o fim da discriminação; a causa não tem partido, e há conservadores que a defendem'),
+    ('M13', 'Isso é tudo pós-modernismo', ['Isso vem de Foucault e Derrida', 'É teoria crítica, coisa de acadêmico', 'Esses movimentos negam a razão e a ciência', 'Identitarismo pós-moderno'],
+     'Erra a origem e julga pela origem: o abolicionismo, o voto feminino e o movimento negro são anteriores ao pós-modernismo e se apoiaram na igualdade iluminista; o relativismo de algumas correntes é um excesso que se critica, não a pauta, e a ideia de que tudo é poder serve hoje também a quem nega fatos'),
 ]
 
 # Os argumentos mais ouvidos (seleção editorial para a capa).
@@ -421,13 +462,13 @@ FALACIAS = [
     ('Falácia genética', 'Julgar uma ideia pela origem, e não pelo conteúdo', 'A6 M2 K11 M4'),
     ('Ad hominem', 'Atacar a pessoa em vez do argumento', 'B3 M3 M7 M9 K9 J18'),
     ('Tu quoque', '"Você também faz"', 'L7 B7 C7'),
-    ('Falsa dicotomia', 'Só duas opções, quando há outras', 'L9 J1 J14 H4 I14'),
+    ('Falsa dicotomia', 'Só duas opções, quando há outras', 'L9 J1 J14 H4 I14 B14 B15 H13 N2'),
     ('Falsa equivalência', 'Tratar como iguais coisas de peso muito diferente', 'C2 K1 K2 K7 L13'),
-    ('Generalização apressada', 'Da parte para o todo, ou do caso isolado para a regra', 'F2 E3 G8 D3 L11 J17 I13'),
-    ('Viés do sobrevivente', 'Olhar só para quem passou pelo filtro', 'E7 C10 B11 I1'),
+    ('Generalização apressada', 'Da parte para o todo, ou do caso isolado para a regra', 'F2 E3 G8 D3 L11 J17 I13 B17 M13 G14'),
+    ('Viés do sobrevivente', 'Olhar só para quem passou pelo filtro', 'E7 C10 B11 I1 B19 N6'),
     ('Falácia do bolo fixo', 'Supor que o total é fixo, e o ganho de um é a perda de outro', 'E1 F1 A10'),
-    ('Espantalho', 'Refutar uma versão distorcida da posição', 'B3 G5 G3 M8'),
-    ('Non sequitur', 'A conclusão não decorre das premissas', 'A1 A11 D1 J2'),
+    ('Espantalho', 'Refutar uma versão distorcida da posição', 'B3 G5 G3 M8 M13'),
+    ('Non sequitur', 'A conclusão não decorre das premissas', 'A1 A11 D1 J2 B14 E11'),
     ('Afirmação sem evidência', 'A alegação empírica não vem acompanhada de dado', 'B5 C9 D6 F9 H1 D13'),
     ('Mudança de assunto', 'Responder a outra coisa', 'L9 B7 M6 M10'),
     ('Do falível ao inútil', 'Como pode errar, não serve para nada', 'K3 K8 K10'),
@@ -443,23 +484,23 @@ FALACIAS = [
 VIESES = [
     ('Viés de confirmação', 'Procurar e lembrar o que confirma o que já se pensa', 'K5 K10 F2 C5'),
     ('Heurística da disponibilidade', 'O que vem fácil à memória parece mais frequente', 'F2 G4 I4 M11'),
-    ('Erro fundamental de atribuição', 'Explicar o que os outros fazem pelo caráter, e o que nós fazemos pela situação', 'I1 I3 C10 E3 I17'),
-    ('Crença no mundo justo', 'Supor que cada um tem o que merece', 'I1 I5 B6 A11 J15'),
+    ('Erro fundamental de atribuição', 'Explicar o que os outros fazem pelo caráter, e o que nós fazemos pela situação', 'I1 I3 C10 E3 I17 N4 B16'),
+    ('Crença no mundo justo', 'Supor que cada um tem o que merece', 'I1 I5 B6 A11 J15 B19 N4'),
     ('Viés de status quo', 'Preferir como está, só porque está', 'A7 H2 L10 J6 I12'),
     ('Favoritismo intragrupo', 'Julgar melhor quem é do próprio grupo', 'F1 F3 A8 C2'),
     ('Homogeneidade do exogrupo', '"Eles são todos iguais"', 'F2 C5 M3 E3 J17'),
-    ('Ameaça ao status', 'Sentir a igualdade do outro como perda própria', 'A10 B9 M5 G4 I13'),
-    ('Reatância', 'Reagir contra o que parece restringir a liberdade', 'L2 L3 L10 G9'),
-    ('Dissonância cognitiva', 'Ajustar a crença para não mudar o comportamento', 'C6 I7 B8 L6'),
+    ('Ameaça ao status', 'Sentir a igualdade do outro como perda própria', 'A10 B9 M5 G4 I13 B14'),
+    ('Reatância', 'Reagir contra o que parece restringir a liberdade', 'L2 L3 L10 G9 N5 N7'),
+    ('Dissonância cognitiva', 'Ajustar a crença para não mudar o comportamento', 'C6 I7 B8 L6 N10'),
     ('Efeito Dunning-Kruger', 'Quem sabe pouco superestima o que sabe', 'K5 K7 J8'),
-    ('Essencialismo', 'Tratar categorias sociais como naturezas fixas', 'B1 C9 G1 C12'),
+    ('Essencialismo', 'Tratar categorias sociais como naturezas fixas', 'B1 C9 G1 C12 B17 B18 G14'),
     ('Viés de negatividade', 'Dar mais peso ao caso ruim', 'F2 G8 H1 J10'),
     ('Pensamento motivado', 'Chegar à conclusão que se queria chegar', 'K9 K4 J2 B4 I18'),
-    ('Ilusão de controle', 'Acreditar que o esforço individual decide tudo', 'I1 C10 D11 I15'),
+    ('Ilusão de controle', 'Acreditar que o esforço individual decide tudo', 'I1 C10 D11 I15 N4 N6'),
     ('Reificação do mérito', 'Confundir resultado com merecimento', 'A5 I5 J2 J12'),
-    ('Efeito do observador privilegiado', 'Quem não sofre o dano não o vê', 'L11 C4 B2 D2 I16'),
-    ('Paternalismo', 'Decidir pelo outro "para o bem dele"', 'D9 E6 H7 J8 H13 D13'),
-    ('Pânico moral', 'Medo desproporcional a uma mudança social', 'G3 G5 H11 F7'),
+    ('Efeito do observador privilegiado', 'Quem não sofre o dano não o vê', 'L11 C4 B2 D2 I16 N5 N8 N10 G14'),
+    ('Paternalismo', 'Decidir pelo outro "para o bem dele"', 'D9 E6 H7 J8 N1 D13 N3 N9 N7 H13 B18'),
+    ('Pânico moral', 'Medo desproporcional a uma mudança social', 'G3 G5 H11 F7 E11 B15'),
     ('Cinismo defensivo', 'Descrer de tudo para não ter de agir', 'J10 K10 K8'),
 ]
 

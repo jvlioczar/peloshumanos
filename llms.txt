@@ -12,7 +12,7 @@ Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Anima
 
 ## Argumentos
 
-- [Todos os argumentos](https://peloshumanos.biblioverse.org/#argumentos): os 171 argumentos usados contra a igualdade entre humanos, com a falha principal de cada um
+- [Todos os argumentos](https://peloshumanos.biblioverse.org/#argumentos): os 190 argumentos usados contra a igualdade entre humanos, com a falha principal de cada um
 - [As famílias](https://peloshumanos.biblioverse.org/familias.html): os argumentos agrupados por lógica de dominação e pelo movimento que a enfrenta
 - [Família A: Hierarquia e desigualdade "natural"](https://peloshumanos.biblioverse.org/familias/a.html): Alguma diferença entre pessoas justifica que umas contem menos? Enfrenta a igual consideração.
 - [Família B: Sexismo e patriarcado](https://peloshumanos.biblioverse.org/familias/b.html): Ser mulher justifica menos poder, menos salário, menos liberdade? Enfrenta o feminismo.
@@ -23,6 +23,7 @@ Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Anima
 - [Família G: LGBTfobia e transfobia](https://peloshumanos.biblioverse.org/familias/g.html): A orientação sexual ou a identidade de gênero justificam menos direitos? Enfrenta o respeito à orientação sexual e à identidade de gênero.
 - [Família H: Moralismo sexual: corpos e relações](https://peloshumanos.biblioverse.org/familias/h.html): Quem decide como adultos informados se relacionam e usam o próprio corpo? Enfrenta a liberdade de relações e dos corpos.
 - [Família I: Classismo e aporofobia](https://peloshumanos.biblioverse.org/familias/i.html): A pobreza é culpa de quem é pobre? Enfrenta a justiça social e econômica.
+- [Família N: Autonomia sobre a própria vida](https://peloshumanos.biblioverse.org/familias/n.html): Quem decide sobre a vida de cada pessoa, e onde essa decisão passa a atingir os outros? Enfrenta a autonomia, a redução de danos e o limite do dano aos outros.
 - [Família J: Concentração de poder](https://peloshumanos.biblioverse.org/familias/j.html): Alguém pode ter poder demais, mesmo sendo competente ou bem-intencionado? Enfrenta a democracia e a distribuição do poder.
 - [Família K: Anticiência, relativismo e ultraceticismo](https://peloshumanos.biblioverse.org/familias/k.html): Se a ciência pode errar, tudo vale a mesma coisa? Enfrenta a defesa do conhecimento.
 - [Família L: Evasões e a liberdade como escudo](https://peloshumanos.biblioverse.org/familias/l.html): Dizer "é só minha opinião" encerra a discussão sobre quem é prejudicado? Enfrenta a conversa honesta.
@@ -37,4 +38,4 @@ Site de acesso livre, sem cadastro, irmão do Guia de Argumentação Pelos Anima
 
 ## Para o próprio movimento
 
-- [Pare de dizer isso](https://peloshumanos.biblioverse.org/argumentos-ruins.html): 33 argumentos usados por quem defende a igualdade que não resistem a exame, e como dizer melhor
+- [Pare de dizer isso](https://peloshumanos.biblioverse.org/argumentos-ruins.html): 34 argumentos usados por quem defende a igualdade que não resistem a exame, e como dizer melhor

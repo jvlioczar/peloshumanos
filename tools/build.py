@@ -95,7 +95,7 @@ def texto(el): return ''.join(el.itertext()).strip()
 def limpa(s):
     s = re.sub(r'\b[Cc]itad[oa]s? de memória(, sem consulta à fonte)?', 'fonte ainda não conferida', s)
     return s
-COD_RE = re.compile(r'(?<![\w.-])([A-M]\d{1,2})(?![\w-])')
+COD_RE = re.compile(r'(?<![\w.-])([A-N]\d{1,2})(?![\w-])')
 def liga(s, ctx):
     def f(m):
         c = m[1]
@@ -170,7 +170,7 @@ def rede(rs, c):
         o = ''
         for r in rs:
             if len(r) < 3 or re.sub('<[^>]+>', '', r[0]) != dir_: continue
-            cods = [x for x in re.findall(r'[A-M]\d{1,2}', re.sub('<[^>]+>', '', r[1])) if x in ARGS]
+            cods = [x for x in re.findall(r'[A-N]\d{1,2}', re.sub('<[^>]+>', '', r[1])) if x in ARGS]
             alvo = ''.join(f'<a class="no" style="--c:{FAMILIAS[x[0]]["cor"]}" href="{ARGS[x]["slug"]}.html"><b>{x}</b> {e(ARGS[x]["frase"])}</a>' for x in cods)
             o += f'<div class="elo">{alvo}<small>{r[2]}</small></div>'
         return o
@@ -277,7 +277,7 @@ LOGO = ('<svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><pat
         '<g fill="#ffeb5b"><circle cx="20" cy="12" r="5"/><path d="M11 28a9 7 0 0 1 18 0z"/></g></svg>')
 TODOS = 'index.html#argumentos'
 MENU = [(TODOS, 'Argumentos'), ('objecoes-politicas.html', 'Objeções políticas'), ('argumentos-ruins.html', 'Pare de dizer isso'),
-        ('Aprofundar', [('comece-aqui.html', 'Comece aqui'), ('garantias.html', 'O que se deve a cada pessoa'), ('familias.html', 'As 13 famílias'), ('treino.html', 'Treinar respostas'), ('falacias.html', 'Falácias'), ('vieses.html', 'Vieses')]),
+        ('Aprofundar', [('comece-aqui.html', 'Comece aqui'), ('garantias.html', 'O que se deve a cada pessoa'), ('familias.html', f'As {len(FAMILIAS)} famílias'), ('treino.html', 'Treinar respostas'), ('falacias.html', 'Falácias'), ('vieses.html', 'Vieses')]),
         ('sobre.html', 'Sobre')]
 def monta_menu(pre, atual):
     h = ''
@@ -383,7 +383,7 @@ def page(path, title, desc, corpo, atual='', tipo='WebPage', trilha=(), pergunta
 <main id="main">{corpo}</main>
 <footer class="rodape"><div class="wrap rodape-in">
 <div><strong>{NOME}</strong><p>Os argumentos usados para justificar que alguns humanos contem menos, na sua versão mais forte, com o que acertam e onde falham.</p><p>Site irmão do <a href="{IRMAO}">Guia de Argumentação Pelos Animais</a>. Parte da <a href="https://biblioverse.org">BiblioVerse</a>.</p></div>
-<div><p class="ti">Argumentos</p><ul>{l('comece-aqui.html', 'Como usar o guia')}{l(TODOS, 'Todos os argumentos')}{l('familias.html', 'As 13 famílias')}{l('treino.html', 'Treinar respostas')}{l('argumentos-ruins.html', 'Pare de dizer isso')}</ul></div>
+<div><p class="ti">Argumentos</p><ul>{l('comece-aqui.html', 'Como usar o guia')}{l(TODOS, 'Todos os argumentos')}{l('familias.html', f'As {len(FAMILIAS)} famílias')}{l('treino.html', 'Treinar respostas')}{l('argumentos-ruins.html', 'Pare de dizer isso')}</ul></div>
 <div><p class="ti">Aprofundar</p><ul>{l('garantias.html', 'O que se deve a cada pessoa')}{l('objecoes-politicas.html', 'Objeções políticas e éticas')}{l('falacias.html', 'Falácias')}{l('vieses.html', 'Vieses')}{l('sobre.html', 'Sobre o guia')}</ul></div>
 </div></footer>
 <script src="{pre}assets/app.js?v={VER_JS}" defer></script>
@@ -411,7 +411,7 @@ def item_arg(a):
     formas = ''.join(f'<li>"{e(x)}"</li>' for x in a['formas'])
     return f'<details class="item" style="--c:{f["cor"]}" data-parte="{f["parte"]}" data-fam="{a["fam"]}" data-st="{"cap" if ok else "ver"}" data-u="argumentos/{a["slug"]}.html"><summary><span class="cod">{a["c"]}</span><b>{e(a["frase"])}</b>{"<i class=ok title=Capítulo&nbsp;completo></i>" if ok else ""}</summary><div class="abre"><p class="falha-i"><strong>Falha principal:</strong> {e(a["falha"])}</p><ul class="formas">{formas}</ul><a class="btn peq" href="argumentos/{a["slug"]}.html">{"Abrir o capítulo completo" if ok else "Abrir o verbete"} →</a></div></details>'
 def cartao_fam(f, pre=''):
-    return f'<a class="cartao" style="--c:{f["cor"]}" href="{pre}familias/{f["c"].lower()}.html"><span class="cod">Família {f["c"]} · {f["n"]} argumentos</span><h3>{e(f["nome"])}</h3><p>{e(f["perg"])}</p><p class="ev">Enfrenta: {e(f["mov"]).lower()}</p></a>'
+    return f'<a class="cartao" style="--c:{f["cor"]}" href="{pre}familias/{f["c"].lower()}.html"><span class="cod">Família {f["c"]} · {f["n"]} argumento{"s" if f["n"] != 1 else ""}</span><h3>{e(f["nome"])}</h3><p>{e(f["perg"])}</p><p class="ev">Enfrenta: {e(f["mov"]).lower()}</p></a>'
 def ramo(f): return f'<a class="ramo" style="--c:{f["cor"]}" href="#fam-{f["c"].lower()}"><span class="letra">{f["c"]}</span><b>{e(f["nome"])}</b><small>{e(f["perg"])}</small></a>'
 def lista_fontes(ls):
     return '<h2>Fontes e leituras</h2><div class="fontes"><ul>' + ''.join(f'<li><a href="{e(u)}" {EXT}>{e(t)}</a></li>' for t, u in ls) + '</ul></div>'
@@ -460,11 +460,11 @@ def familias():
     for k, (nome, perg, desc) in CAT.PARTES.items():
         corpo += f'<h2 style="margin:0 0 6px">{e(nome)}: {e(perg).lower()}</h2><p style="margin:0 0 14px">{e(desc)}</p><div class="grade" style="margin-bottom:34px">{"".join(cartao_fam(f) for f in FAMILIAS.values() if f["parte"] == k)}</div>'
     corpo += '</div></section>'
-    page('familias.html', f'As {len(FAMILIAS)} famílias', 'As treze famílias de argumentos contra a igualdade entre humanos, de sexismo e racismo a concentração de poder e anticiência, com a pergunta de fundo e o movimento que cada uma enfrenta.', corpo, 'familias.html', 'CollectionPage')
+    page('familias.html', f'As {len(FAMILIAS)} famílias', f'As {len(FAMILIAS)} famílias de argumentos contra a igualdade entre humanos, de sexismo e racismo a concentração de poder e anticiência, com a pergunta de fundo e o movimento que cada uma enfrenta.', corpo, 'familias.html', 'CollectionPage')
     for c, f in FAMILIAS.items():
         extra = f'<p class="tese" style="--c:{f["cor"]}"><strong>Pergunta de fundo:</strong> {e(f["perg"])}<br/><strong>Erro dominante:</strong> {e(f["erro"])}<br/><strong>Quem enfrenta:</strong> {e(f["mov"]).lower()}</p>'
-        corpo = cabeca('<a href="../">Início</a> / <a href="../familias.html">Famílias</a>', f'{c}. {e(f["nome"])}', f'{f["n"]} argumentos. Parte: {e(CAT.PARTES[f["parte"]][0])}.', extra) + f'<section class="secao"><div class="wrap"><h2 class="so-leitor">Argumentos desta família</h2><div class="grade">{"".join(cartao(a, "../") for a in f["args"])}</div></div></section>'
-        page(f'familias/{c.lower()}.html', f'Família {c}: {f["nome"]}', f'{f["n"]} argumentos sobre {f["nome"].lower()}. {f["perg"]} Erro dominante: {f["erro"]}.', corpo, 'familias.html', 'CollectionPage', [('Famílias', 'familias.html')])
+        corpo = cabeca('<a href="../">Início</a> / <a href="../familias.html">Famílias</a>', f'{c}. {e(f["nome"])}', f'{f["n"]} argumento{"s" if f["n"] != 1 else ""}. Parte: {e(CAT.PARTES[f["parte"]][0])}.', extra) + f'<section class="secao"><div class="wrap"><h2 class="so-leitor">Argumentos desta família</h2><div class="grade">{"".join(cartao(a, "../") for a in f["args"])}</div></div></section>'
+        page(f'familias/{c.lower()}.html', f'Família {c}: {f["nome"]}', f'{f["n"]} argumento{"s" if f["n"] != 1 else ""} sobre {f["nome"].lower()}. {f["perg"]} Erro dominante: {f["erro"]}.', corpo, 'familias.html', 'CollectionPage', [('Famílias', 'familias.html')])
 
 def indice_erro(path, titulo, lede, itens):
     cards = ''
@@ -597,6 +597,7 @@ def comece():
     partes = ''.join(f'<li><strong>{e(n)}:</strong> {e(d)} ' + ', '.join(f'<a href="familias/{f["c"].lower()}.html">{f["c"]}</a>' for f in FAMILIAS.values() if f['parte'] == k) + '.</li>' for k, (n, p, d) in CAT.PARTES.items())
     corpo = cabeca('<a href="./">Início</a>', 'Comece aqui', 'Este guia reúne os argumentos usados para justificar que algumas pessoas contem menos que outras, ou para defender a concentração de poder e atacar o conhecimento, organizados para você encontrar a resposta de que precisa sem ler tudo.') + f'''<section class="secao"><div class="wrap estreito artigo">
 <h2 id="relevancia">O critério de fundo: relevância</h2><p>Toda discriminação injusta tem a mesma estrutura: um traço irrelevante para o que está em jogo é tomado como relevante. A cor da pele é irrelevante para saber álgebra, para alugar uma casa ou para ser parado pela polícia. O sexo é irrelevante para chefiar uma empresa. A idade é relevante para dirigir, e por isso existe avaliação individual, mas é irrelevante para votar. Uma diferença de tratamento só se justifica quando o traço tem relação direta com o que se decide, e quando a decisão é feita caso a caso, e não pelo grupo.</p>
+<p>Por isso a igualdade nunca precisou negar que as diferenças existem. Como resume o filósofo Daniel Kaufman, os movimentos por direitos civis não negaram que a cor da pele, o sexo ou a orientação sexual sejam reais; negaram que tenham qualquer peso moral ou político legítimo numa sociedade democrática (<a href="https://web.archive.org/web/20260114095914/https://theelectricagora.com/2018/12/10/the-end-of-traditional-civil-rights/" {EXT}>The Electric Agora, 2018</a>). É o mesmo critério da relevância, e é por isso que este guia critica tanto quem usa a diferença para discriminar quanto quem a nega para não dar munição ao outro lado.</p>
 <p>Esse critério é o mesmo que a <a href="https://eticaparainiciantes.biblioverse.org/fronteiras.html" {EXT}>tabela das fronteiras da parcialidade</a> do Ética Para Iniciantes usa para egoísmo, nacionalismo, sexismo, racismo, capacitismo, etarismo e especismo: um traço irrelevante, tomado como relevante, e a posição imparcial correspondente, que nunca é a hostilidade ao grupo favorecido, e sim a consideração igual.</p>
 <h2 id="senciencia">O que sustenta tudo: senciência</h2><p>Por que os interesses de alguém contam? Não porque a pessoa é inteligente, produtiva, do mesmo país ou da mesma fé: porque ela pode ser prejudicada ou beneficiada pelo que lhe acontece. É a capacidade de sofrer e de ter a vida melhor ou pior, a senciência, que faz de um ser alguém com interesses. Esse é o ponto comum de toda defesa de indivíduos: vale para mulheres, pessoas negras, pessoas com deficiência, idosos, crianças, imigrantes, pessoas LGBT, pobres, e vale também para os demais animais, tema do <a href="{IRMAO}" {EXT}>guia irmão</a>. Quem aceita o critério para humanos e o nega para os animais, ou o aceita para o próprio grupo e o nega para outro, precisa apontar uma diferença relevante. Este guia mostra que, caso a caso, ela não aparece.</p>
 <h2 id="garantias">O que se deve a cada pessoa</h2><p>Na prática, o critério se traduz num conjunto de garantias básicas, tiradas da Declaração Universal de 1948 e da Constituição de 1988: a vida e um fim sem sofrimento inútil, o próprio corpo, trabalho digno, descanso, educação, saúde, privacidade, expressão, julgamento justo e outras. A página <a href="garantias.html">O que se deve a cada pessoa</a> reúne {len(GAR.ITENS)} delas, cada uma com o motivo, as exceções legítimas e os argumentos que a atacam.</p>

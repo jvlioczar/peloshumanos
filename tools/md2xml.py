@@ -7,7 +7,7 @@ import glob, html, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 e = lambda s: html.escape(s, quote=True)
-INLINE = re.compile(r'\*\*(.+?)\*\*|\*(.+?)\*|\[(.+?)\]\((\S+?)\)')
+INLINE = re.compile(r'\*\*(.+?)\*\*|\*(.+?)\*|\[(.+?)\]\(((?:[^()\s]|\([^()\s]*\))+)\)')
 
 def runs(s):
     """Texto em <text>, um por trecho com a mesma marcação."""

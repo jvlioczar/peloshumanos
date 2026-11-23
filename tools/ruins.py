@@ -215,6 +215,17 @@ RUINS = [
                  ('A meta-analysis of procedures to change implicit measures, Journal of Personality and Social Psychology (2019)', 'https://doi.org/10.1037/pspa0000160'),
                  ('Best Practices or Best Guesses? Assessing the Efficacy of Corporate Affirmative Action and Diversity Policies, American Sociological Review (2006)', 'https://doi.org/10.1177/000312240607100404'),
                  ('A meta-analytic test of intergroup contact theory, Journal of Personality and Social Psychology (2006)', 'https://doi.org/10.1037/0022-3514.90.5.751')]),
+    dict(c='V37', tipo='ataque', frase='Discurso violento se responde com violência.',
+         por=['Quem bate porque não gostou do que ouviu adota a regra que diz combater: a de que a força decide quem tem razão. Essa regra protege sempre o lado mais forte, que raramente é o das minorias, e transforma quem fez o discurso em vítima, entregando a ele o argumento que faltava.',
+              'Também funciona mal. Num experimento com 800 pessoas, a violência fez o público ver o grupo que protestava como menos razoável e aumentou o apoio a quem se opunha a ele. Nos protestos negros de 1960 a 1972 nos EUA, a ação não violenta, sobretudo quando reprimida, ganhou a imprensa e o Congresso, enquanto os protestos violentos favoreceram o lado contrário. E, num levantamento de campanhas políticas do século XX, as não violentas tiveram cerca do dobro de sucesso das armadas.',
+              'As exceções existem e são estreitas, e todas respondem a atos, não a palavras. A legítima defesa contra um ataque em curso ou iminente, proporcional, é reconhecida em praticamente todo direito penal, e vale também para defender outra pessoa. A própria Declaração Universal, no preâmbulo, menciona a rebelião contra a tirania e a opressão como último recurso, quando o império da lei falha, e a resistência a ocupações e regimes que matam é discutida com seriedade na ética. A incitação à violência é ela mesma punível, e quem a sofre deve recorrer à lei.'],
+         lugar='Responda ao discurso com argumento, com fatos, com crítica pública e, quando ele vira ameaça ou incitação, com a lei. Reserve a força para o que a ética e o direito já admitem: defender-se, e defender outra pessoa, de um ataque real.',
+         formas=['Nazista tem que apanhar', 'Contra fascista, só a porrada', 'Com essa gente não se conversa'],
+         liga=['J17', 'J22', 'L2', 'L12'],
+         fontes=[('Does Violent Protest Backfire? Testing a Theory of Public Reactions to Activist Violence, Socius (2018)', 'https://doi.org/10.1177/2378023118803189'),
+                 ('Agenda Seeding: How 1960s Black Protests Moved Elites, Public Opinion and Voting, American Political Science Review (2020)', 'https://doi.org/10.1017/S000305542000009X'),
+                 ('Why Civil Resistance Works: The Strategic Logic of Nonviolent Conflict, International Security (2008)', 'https://doi.org/10.1162/isec.2008.33.1.7'),
+                 ('Declaração Universal dos Direitos Humanos, preâmbulo, UNICEF Brasil', 'https://www.unicef.org/brazil/declaracao-universal-dos-direitos-humanos')]),
 ]
 
 ORDEM_V = [r['c'] for r in RUINS]

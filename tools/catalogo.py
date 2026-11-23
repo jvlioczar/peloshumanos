@@ -76,7 +76,7 @@ ARGS_RAW = [
     ('O3', 'A aparência é tudo, a primeira impressão é o que fica', ['Beleza abre portas', 'Quem não se cuida não é levado a sério', 'O que importa é parecer'],
      'Toma o prêmio da aparência, que é real, por mérito, quando as impressões tiradas de um rosto acertam pouco sobre caráter e competência, e parte do prêmio é erro de julgamento de quem paga, ou seja, discriminação a corrigir'),
     ('O4', 'Marca é status: quem não usa não é ninguém', ['Roupa de marca mostra quem você é', 'Gente de bem usa isso', 'Celular velho é coisa de pobre'],
-     'Confunde o sinal com a pessoa e esquece que o status de um bem posicional depende de os outros não o terem: quando todos correm atrás do último celular ou do carro do ano, ninguém sai do lugar, e as redes aceleram a corrida'),
+     'Confunde o sinal com a pessoa e esquece que o status de um bem posicional depende de os outros não o terem: quando todos correm atrás do último celular ou do carro do ano, ninguém sai do lugar, as redes aceleram a corrida, e a exclusividade é fabricada por quem vende, num fetiche que esconde quem fez o objeto'),
     ('O5', 'Quem não está nas redes não existe', ['Número de seguidores mostra quem importa', 'Se não postou, não aconteceu', 'Influenciador é que é bem-sucedido'],
      'Troca visibilidade por valor: o feed mostra os melhores momentos dos outros, comparados com o dia comum de quem olha, e a audiência mede alcance, que se compra e se concentra, não o peso dos interesses de alguém'),
     ('O6', 'Conta quem você conhece, não o que você sabe', ['Sem quem indica você não vai a lugar nenhum', 'Contato vale mais que diploma', 'Networking é tudo'],
@@ -85,6 +85,8 @@ ARGS_RAW = [
      'Acerta que o sistema recompensa status e poder e que recusar o jogo custa, sobretudo a quem tem pouco, mas apresenta como escolha única entre aderir a tudo e ficar para trás o que é uma série de escolhas de grau e de regras coletivas; se e quanto ceder fica em aberto'),
     ('O8', 'Se você quer, você consegue: é só mentalizar', ['Pensamento positivo atrai riqueza', 'Lei da atração: o universo conspira a favor', 'Dá para ficar rico com a internet em pouco tempo, só depende de você'],
      'Toma a parte verdadeira, a de que acreditar que se pode influenciar o resultado ajuda a tentar, pela promessa falsa de que querer basta: fantasiar com o sucesso prevê menos esforço, a "lei da atração" não tem mecanismo, e nos mercados de dinheiro rápido a maioria perde enquanto quem vende o método ganha'),
+    ('O9', 'O bom é ser exclusivo: lugar de gente diferenciada não é para qualquer um', ['Se todo mundo pode entrar, perde a graça', 'Lugar bom é lugar sem pobre', 'Cada um no seu quadrado'],
+     'Faz o bem-estar de estar dentro depender de outros ficarem fora, como mostra a queixa de que o lugar "perdeu o nível" quando quem ascende ou é incluído chega ao aeroporto, ao restaurante ou à universidade, e usa a renda e a origem, critérios irrelevantes, para decidir quem merece estar presente; escolher com quem conviver e pagar por um serviço melhor é legítimo, barrar e humilhar quem tem menos não é'),
 
     # ---------- B. Sexismo e patriarcado ----------
     ('B1', 'Homens e mulheres são biologicamente diferentes, então têm papéis diferentes', ['A mulher nasceu para cuidar, o homem para prover', 'Biologia não é machismo', 'Existem diferenças cerebrais, é ciência'],

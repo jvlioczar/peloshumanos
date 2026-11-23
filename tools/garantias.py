@@ -4,7 +4,7 @@ e os argumentos do catálogo que costumam atacá-la. Os títulos evitam a palavr
 o guia fala do que cada pessoa precisa e merece, não só do que a lei já garante."""
 
 TITULO = 'O que se deve a cada pessoa'
-LEDE = ('As garantias básicas que este guia defende, tiradas da Declaração Universal de 1948 e da Constituição brasileira de 1988. '
+LEDE = ('As garantias básicas que este guia defende, tiradas da Declaração Universal dos Direitos Humanos, de 1948, e dos pactos internacionais que a detalham. A Constituição brasileira de 1988 aparece como exemplo de como uma constituição nacional as traduz em lei. '
         'Cada uma vem com o motivo, as exceções legítimas, porque quase nenhuma é absoluta, e os argumentos que costumam atacá-la.')
 INTRO = ('O critério é o mesmo do resto do guia. Quem pode ser prejudicado ou beneficiado tem interesses que contam, e um traço só justifica '
          'tratamento diferente quando é relevante para o que está em jogo. As garantias abaixo são a forma prática desse critério: o mínimo para que '
@@ -86,11 +86,12 @@ ITENS = [
               'A assistência é para quem dela necessitar, com critérios de renda (art. 203); fraudes existem, se apuram e se punem, e não tornam ilegítimo o benefício de quem precisa.'],
          onde='Declaração Universal, arts. 22 e 25; Constituição, arts. 194 a 204', liga=['I2', 'F9', 'E5', 'I1', 'I19', 'A15']),
     dict(s='ir-e-vir', t='Ir e vir',
-         porque='Circular pela cidade e pelo país, morar onde puder e sair de onde há perigo é condição para trabalhar, estudar, encontrar quem se ama e escapar da violência.',
+         porque='Circular pela cidade e pelo país, morar onde puder e sair de onde há perigo é condição para trabalhar, estudar, encontrar quem se ama e escapar da violência. O guia defende o cosmopolitismo: todo ser humano pertence a uma mesma comunidade moral, e o lugar onde alguém nasceu, que ninguém escolhe, não muda o peso dos seus interesses.',
          exc=['A liberdade de locomoção vale "em tempo de paz" (Constituição, art. 5º, XV) e pode ser restringida no estado de sítio (art. 139).',
               'A prisão em flagrante ou por ordem judicial fundamentada restringe a liberdade de ir e vir (art. 5º, LXI).',
               'Quarentena e isolamento podem ser impostos em emergência de saúde pública (Lei 13.979/2020).',
-              'Entrar em outro país segue as regras de migração de cada Estado; quem foge de perseguição tem a garantia de pedir asilo (Declaração Universal, art. 14).'],
+              'Entrar em outro país segue as regras de migração de cada Estado; quem foge de perseguição tem a garantia de pedir asilo (Declaração Universal, art. 14).',
+              'O controle regional tem uma função legítima. Países, estados e cidades funcionam como os bairros e distritos de uma cidade grande: a divisão ajuda a contar quem mora em cada lugar, planejar escolas, hospitais e segurança e manter a ordem, o que seria difícil se todos pudessem ir e vir sem regra alguma, a qualquer momento e em qualquer número. Mas o que a administração precisa é registro e um ritmo administrável, não regras tão pesadas que impeçam a migração; e o ódio ao estrangeiro jamais se justifica (ver F10).'],
          onde='Declaração Universal, arts. 13 e 14; Constituição, art. 5º, XV', liga=['F8', 'F10', 'F6', 'I13', 'I3', 'I4', 'N3']),
     dict(s='espaco-publico', t='Uso do espaço público',
          porque='Praças, praias, ruas e parques são de uso comum. Ninguém precisa pagar, pertencer a um bairro ou ter a aparência "certa" para estar neles.',

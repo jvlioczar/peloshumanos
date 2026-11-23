@@ -127,6 +127,20 @@ ARGS_RAW = [
      'Passa de uma diferença média real de força a um rótulo de fragilidade geral que os dados de sobrevivência desmentem, e usa a média do grupo para decidir o que cada mulher aguenta'),
     ('B19', 'As mulheres não são tão relevantes na história', ['Quem fez a história foram os homens', 'Cite uma grande inventora', 'Se as mulheres fossem tão capazes, haveria mais gênios mulheres'],
      'Toma o registro histórico, de fato masculino, como medida de relevância e de capacidade, quando ele mede quem a lei deixou estudar, publicar, votar e receber crédito; a ausência produzida pela exclusão vira justificativa da exclusão'),
+    ('B20', 'A pílula vermelha mostra a verdade sobre as mulheres que a sociedade esconde', ['Acorda, toma a red pill', 'Quem discorda é beta, é simp', 'O feminismo enganou os homens'],
+     'Parte de dores reais dos homens, como a solidão e a rejeição, mas as explica por uma teoria que nenhum fato pode refutar, em que toda discordância vira prova de que o outro está "dormindo", e vende como verdade escondida o que é seleção de casos, empurrada pelo algoritmo e monetizada'),
+    ('B21', '80% das mulheres disputam os 20% dos homens do topo', ['Mulher é hipergâmica por natureza', 'Nos aplicativos, só o topo é escolhido', 'Mulher sempre troca por um melhor'],
+     'Toma a desigualdade de curtidas nos aplicativos, que é real, pela realidade dos casais: o "80/20" foi suposto num blog com 27 entrevistadas, e os casais se formam sobretudo entre pessoas parecidas'),
+    ('B22', 'Existem homens alfa e beta, e mulher só quer o alfa', ['Seja alfa', 'Homem beta só serve de provedor', 'Mulher gosta de cafajeste'],
+     'Importa de estudos com lobos em cativeiro uma hierarquia que o próprio autor corrigiu e faz castas fixas de uma vantagem de curto prazo de alguns traços, quando a pesquisa separa dominância de prestígio e põe gentileza e honestidade no topo para os dois sexos'),
+    ('B23', 'Mulher tem prazo de validade: depois dos 30, ninguém quer', ['O muro chega para toda mulher', 'Mulher perde valor com a idade, homem ganha', 'Valor no mercado sexual'],
+     'Parte de duas médias reais, a preferência masculina por parceiras mais jovens e a queda da fertilidade, para um "ninguém" que os dados desmentem: a mulher se casa cada vez mais tarde, os casais reais têm idades próximas e a fertilidade também cai nos homens; e troca o valor da pessoa pelo interesse sexual que ela desperta'),
+    ('B24', 'Mulher rodada não serve para casar', ['Quanto mais parceiros, menos valor', 'Homem que pega muitas é garanhão, mulher é vadia', 'Pergunte o número antes de namorar'],
+     'Usa uma correlação entre número de parceiros e divórcio, que vale para os dois sexos e cuja causa é disputada, para condenar só as mulheres, e mede o valor da pessoa por um número que não diz nada sobre o caráter; o que prevê a traição é ter traído antes, não ter tido outros parceiros'),
+    ('B25', 'Casamento é um mau negócio para o homem', ['Homem de valor não se casa', 'No divórcio a mulher leva tudo', 'Siga seu próprio caminho, longe das mulheres'],
+     'Generaliza a partir dos divórcios litigiosos, que são minoria, ignora que a partilha segue o regime de bens, que quem mais perde renda no divórcio é a mulher e que, em média, os homens casados vivem mais, e salta de um risco do contrato para a distância das mulheres'),
+    ('B26', 'Feio não tem chance: a pílula preta é a verdade final', ['Aparência é destino', 'Para incel não tem saída', 'É genética, não adianta tentar'],
+     'Transforma uma desvantagem real, a da aparência, em destino, quando os casais se formam entre pessoas de aparência parecida e a convivência muda o que se acha atraente, e entrega a quem já sofre uma explicação sem saída que anda junto com mais depressão e, numa minoria, com o ódio às mulheres'),
 
     # ---------- C. Racismo ----------
     ('C1', 'Não existe racismo aqui, somos todos misturados', ['Somos uma democracia racial', 'O Brasil é uma democracia racial', 'Aqui todo mundo tem um pé na cozinha', 'Racismo é problema dos Estados Unidos'],
@@ -556,6 +570,7 @@ VIESES = [
 # Cadeias típicas de conversa: nome, códigos em sequência, onde costuma terminar
 CADEIAS = [
     ('Sobre as mulheres', 'B2 B4 B12 B1 A5', 'A5'),
+    ('A pílula vermelha', 'B20 B21 B22 B23 B24 B25 B26', 'B26'),
     ('Sobre raça', 'C1 C4 C3 C10 C6 A11', 'A11'),
     ('Sobre imigrantes', 'F1 F2 F3 F4 A8', 'A8'),
     ('Sobre pessoas trans', 'G1 G3 G4 G8 G5 A2', 'A2'),

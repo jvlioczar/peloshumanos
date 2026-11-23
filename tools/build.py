@@ -98,7 +98,7 @@ def texto(el): return ''.join(el.itertext()).strip()
 def limpa(s):
     s = re.sub(r'\b[Cc]itad[oa]s? de memória(, sem consulta à fonte)?', 'fonte ainda não conferida', s)
     return s
-COD_RE = re.compile(r'(?<![\w.-])([A-N]\d{1,2})(?![\w-])')
+COD_RE = re.compile(r'(?<![\w.-])([A-O]\d{1,2})(?![\w-])')
 def liga(s, ctx):
     def f(m):
         c = m[1]
@@ -173,7 +173,7 @@ def rede(rs, c):
         o = ''
         for r in rs:
             if len(r) < 3 or re.sub('<[^>]+>', '', r[0]) != dir_: continue
-            cods = [x for x in re.findall(r'[A-N]\d{1,2}', re.sub('<[^>]+>', '', r[1])) if x in ARGS]
+            cods = [x for x in re.findall(r'[A-O]\d{1,2}', re.sub('<[^>]+>', '', r[1])) if x in ARGS]
             alvo = ''.join(f'<a class="no" style="--c:{FAMILIAS[x[0]]["cor"]}" href="{ARGS[x]["slug"]}.html"><b>{x}</b> {e(ARGS[x]["frase"])}</a>' for x in cods)
             o += f'<div class="elo">{alvo}<small>{r[2]}</small></div>'
         return o

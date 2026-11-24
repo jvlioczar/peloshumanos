@@ -97,7 +97,7 @@ ARGS_RAW = [
      'Confunde a crítica a um sistema com ódio a pessoas; o feminismo pede igualdade de consideração, e muitos homens são feministas'),
     ('B4', 'A diferença salarial é um mito: as mulheres escolhem outras carreiras', ['Elas ganham menos porque trabalham menos horas', 'Comparando a mesma função, ganham igual', 'É escolha, não discriminação'],
      'Parte da diferença vem de escolhas, mas as escolhas são moldadas pela divisão do cuidado, e uma diferença permanece na mesma função; em vários países, ela se abre com o primeiro filho'),
-    ('B5', 'Mulher no comando é emocional e instável', ['Imagina ela com TPM decidindo', 'Mulher não aguenta pressão', 'Homem é mais racional'],
+    ('B5', 'Mulher no comando é emocional e instável', ['Imagina ela com TPM decidindo', 'Mulher não aguenta pressão', 'Homem é mais racional', 'Uma mulher na presidência deu no que deu'],
      'Estereótipo sem respaldo: empresas e governos liderados por mulheres não têm pior desempenho, e a emotividade atribuída às mulheres é a mesma que se chama de firmeza nos homens'),
     ('B6', 'Com essa roupa, ela estava pedindo', ['Ela se colocou em risco', 'Mulher direita não anda sozinha de noite', 'Também, do jeito que ela se veste…'],
      'Transfere a culpa do agressor para a vítima e erra nos fatos: a maior parte da violência sexual vem de parceiros, parentes e conhecidos, contra vítimas de todas as roupas e idades, muitas delas crianças'),
